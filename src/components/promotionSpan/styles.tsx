@@ -1,0 +1,55 @@
+import styled from "styled-components";
+
+export const Conteiner = styled.div`
+     width: 100%;
+     height: 7vh;
+     background-color: #162258;
+     position: relative;
+     overflow: hidden;
+     font-size: 1.5rem;
+     color: white;
+     display: flex;
+     a {
+          width: 100%;
+          height: 100%;
+          pre {
+               flex: none;
+               height: 100%;
+               text-transform: uppercase;
+               padding: 0.2rem;
+               align-items: center;
+               position: absolute;
+               left: -150%;
+               animation: animate 20s infinite;
+               animation-timing-function: linear;
+               span {
+                    font-weight: bold;
+               }
+          }
+          .second {
+               animation-delay: 11s;
+          }
+          @keyframes animate {
+               0% {
+                    left: -150%;
+                    top: 150%;
+               }
+               1% {
+                    left: -50%;
+                    top: 150%;
+               }
+               2% {
+                    left: 100%;
+                    top: 100%;
+               }
+               5% {
+                    left: 100%;
+                    top: 0;
+               }
+               100% {
+                    left: -150%;
+                    top: 0;
+               }
+          }
+     }
+`;
