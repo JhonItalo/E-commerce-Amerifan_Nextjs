@@ -14,7 +14,13 @@ const generateArrayPromises = () => {
                          return response.json();
                     })
                     .then((data) => {
-                         return data;
+                         const pokemon = {
+                              name: data.name,
+                              id: data.id,
+                              image: data.sprites.other.dream_world.front_default,
+                              types: data.types
+                         }
+                         return pokemon
                     })
                     .catch(() => {
                          const error = 1;

@@ -12,12 +12,7 @@ const Card = ({ pokemon }: props) => {
           <S.Conteiner style={{ flex: "none" }}>
                <>
                     <Link href={`/products/${pokemon.name}`}>
-                         <Image
-                              src={pokemon.sprites.other.dream_world.front_default}
-                              alt={pokemon.name}
-                              width={140}
-                              height={158}
-                         />
+                         <Image src={pokemon.image} alt={pokemon.name} width={140} height={158} />
                     </Link>
                     <div className="info">
                          <p className="name">{pokemon.name}</p>
@@ -30,7 +25,7 @@ const Card = ({ pokemon }: props) => {
                          </div>
                     </div>
 
-                    <ButtonAddCart name={pokemon.name} image={`${pokemon.sprites.other.dream_world.front_default}`}>
+                    <ButtonAddCart name={pokemon.name} image={pokemon.image}>
                          Add to Cart
                     </ButtonAddCart>
                </>

@@ -53,14 +53,15 @@ export const Slide = styled.div`
           flex: none;
           width: 100%;
           height: 100%;
+          position: relative;
      }
      &::-webkit-scrollbar {
           display: none;
      }
-`;
+`; /*
 export const Item = styled.img`
      flex: none;
-`;
+`;*/
 export const Radios = styled.div`
      width: 20%;
      height: 1.5rem;

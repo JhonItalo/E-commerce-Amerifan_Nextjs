@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import * as S from "./styles";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
+import Image from "next/image";
 
 const BannerMain = () => {
      const Carrosel = useRef<HTMLDivElement | null>(null);
@@ -63,13 +64,18 @@ const BannerMain = () => {
                <S.ConteinerSlide>
                     <S.Slide ref={Carrosel}>
                          <Link href="/telefonia">
-                              <S.Item src="/assets/banner/banner1.webp" alt="70% de desconto" width="100%" height="500px" />
+                              <Image src="/assets/banner/banner1.webp" alt="70% de desconto" layout="fill" objectFit="cover" />
                          </Link>
                          <Link href="/telefonia">
-                              <S.Item src="/assets/banner/banner2.webp" alt="promoção Black Friday" width="100%" height="500px" />
+                              <Image
+                                   src="/assets/banner/banner2.webp"
+                                   alt="promoção Black Friday"
+                                   layout="fill"
+                                   objectFit="cover"
+                              />
                          </Link>
                          <Link href="/telefonia">
-                              <S.Item src="/assets/banner/banner1.webp" alt="ganhe premios" width="100%" height="500px" />
+                              <Image src="/assets/banner/banner1.webp" alt="ganhe premios" layout="fill" objectFit="cover" />
                          </Link>
                     </S.Slide>
 

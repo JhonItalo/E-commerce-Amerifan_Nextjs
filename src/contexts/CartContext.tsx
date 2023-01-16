@@ -32,6 +32,7 @@ const CarrinhoContext = ({ children }: props) => {
      const writingNewValueLocalStorage = () => {
           localStorage.setItem("carrinho", JSON.stringify(storage));
      };
+     /*
      useEffect(() => {
           const InicitializeLocalStorage = () => {
                const localStorageString = localStorage.getItem("carrinho");
@@ -51,7 +52,7 @@ const CarrinhoContext = ({ children }: props) => {
                writingNewValueLocalStorage();
           }
      }, [storage]);
-
+*/
      return <CartContext.Provider value={{ storage, setStorage }}>{children}</CartContext.Provider>;
 };
 
