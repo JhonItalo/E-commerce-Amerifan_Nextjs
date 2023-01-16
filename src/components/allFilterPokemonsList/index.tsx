@@ -2,7 +2,7 @@ import { useContext } from "react";
 import * as S from "./styles";
 import { DataProviderContext } from "../../contexts/DataProviderContext";
 import { FilterProviderContext, FiltercontextType } from "../../contexts/FilterContext";
-import Card from "../card";
+import Card from "../card/index";
 
 const AllFilterPokemonsList = () => {
      console.log("list filter render");

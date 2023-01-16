@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 import * as S from "./styles";
-import Card from "../Card";
+import Card from "../card";
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 
 type props = {
