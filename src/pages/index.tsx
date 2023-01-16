@@ -8,11 +8,12 @@ import RegistrationOffers from "../components/registrationOffers";
 import ShowProducts from "../components/showProducts";
 
 type props = {
+     data: any[];
      bestSeller: any[];
      newProducts: any[];
 };
 
-export default function Home({ bestSeller, newProducts }: props) {
+export default function Home({ data, bestSeller, newProducts }: props) {
      console.log(bestSeller, "bestseller");
      console.log(newProducts, "newproducts");
      return (
@@ -23,19 +24,21 @@ export default function Home({ bestSeller, newProducts }: props) {
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
                </Head>
-               <main>
-                    <>
-                         <SlideCategorys />
-                         <PromotionSpan />
-                         <BannerMain />
-                         <section>
-                              <ShowProducts title="Best Seller" data={bestSeller} />
 
-                              <ShowProducts title="New products" data={newProducts} />
-                         </section>
-                         <RegistrationOffers />
+               {data && (
+                    <>
+                         <main>
+                              <SlideCategorys />
+                              <PromotionSpan />
+                              <BannerMain />
+                              <section>
+                                   <ShowProducts title="Best Seller" data={bestSeller} />
+                                   <ShowProducts title="New products" data={newProducts} />
+                              </section>
+                              <RegistrationOffers />
+                         </main>
                     </>
-               </main>
+               )}
           </>
      );
 }
@@ -48,6 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
      return {
           props: {
+               data: data,
                bestSeller: data.concat().splice(0, 8),
                newProducts: data.concat().splice(8, 16),
                error: error,
