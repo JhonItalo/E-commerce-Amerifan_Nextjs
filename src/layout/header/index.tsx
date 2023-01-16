@@ -10,7 +10,7 @@ const Header = () => {
      console.log("header render");
      return (
           <S.Header>
-               <S.InitialPromotionSpan></S.InitialPromotionSpan>
+               <S.InitialPromotionSpan>developer: johh Italo</S.InitialPromotionSpan>
                <S.Content>
                     <S.Atendimento>
                          <Link href="/telefonia">Chame o vendedor</Link>

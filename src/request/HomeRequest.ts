@@ -27,7 +27,7 @@ const generateArrayPromises = () => {
 
 const pokemonsListPromises = generateArrayPromises();
 
-export const resolveListPromises = async () => {
+export const resolveListRequests = async () => {
      return Promise.all(pokemonsListPromises)
           .then((pokemons) => {
                if (pokemons.find((item) => item === 1)) {

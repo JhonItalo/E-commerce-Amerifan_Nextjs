@@ -9,6 +9,7 @@ export const Header = styled.header`
 export const InitialPromotionSpan = styled.div`
      height: 20%;
      background-color: black;
+     color: white;
 `;
 export const Content = styled.div`
      width: 100%;

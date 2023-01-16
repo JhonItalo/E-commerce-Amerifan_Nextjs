@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import { resolveListPromises } from "../request/HomeRequest";
+import { resolveListRequests } from "../request/HomeRequest";
 import SlideCategorys from "../components/slideCategory";
 import PromotionSpan from "../components/promotionSpan";
 import BannerMain from "../components/bannerMain";
@@ -40,7 +40,7 @@ export default function Home({ bestSeller, newProducts }: props) {
      );
 }
 export const getStaticProps: GetStaticProps = async () => {
-     const { data, error } = await resolveListPromises();
+     const { data, error } = await resolveListRequests();
 
      if (error) {
           return { notFound: true };

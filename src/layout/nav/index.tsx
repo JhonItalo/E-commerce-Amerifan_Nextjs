@@ -13,7 +13,7 @@ const Nav = () => {
                <ul>
                     <S.Departments>
                          <AiOutlineMenu className="icone_menu" />
-                         <p>Departamenhrefs</p>
+                         <p>Departamentos</p>
                          <SlArrowDown className="icone_arrow" />
                          <ModalAllDepartaments />
                     </S.Departments>
