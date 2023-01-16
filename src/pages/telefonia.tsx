@@ -21,6 +21,9 @@ export default Category;
 export const getStaticProps: GetStaticProps = async () => {
      const { data, error } = await resolveListRequests();
 
+     if (error) {
+          return { notFound: true };
+     }
      return {
           props: {
                data: data,
