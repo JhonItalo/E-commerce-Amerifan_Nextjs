@@ -32,8 +32,8 @@ const CarrinhoContext = ({ children }: props) => {
      const writingNewValueLocalStorage = () => {
           localStorage.setItem("carrinho", JSON.stringify(storage));
      };
-     /*
      useEffect(() => {
+          console.log("context effect");
           const InicitializeLocalStorage = () => {
                const localStorageString = localStorage.getItem("carrinho");
                if (typeof localStorageString != typeof "string") {
@@ -52,7 +52,7 @@ const CarrinhoContext = ({ children }: props) => {
                writingNewValueLocalStorage();
           }
      }, [storage]);
-*/
+
      return <CartContext.Provider value={{ storage, setStorage }}>{children}</CartContext.Provider>;
 };
 

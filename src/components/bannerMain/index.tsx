@@ -68,6 +68,7 @@ const BannerMain = () => {
                          </Link>
                          <Link href="/telefonia">
                               <Image
+                                   priority
                                    src="/assets/banner/banner2.webp"
                                    alt="promoção Black Friday"
                                    layout="fill"

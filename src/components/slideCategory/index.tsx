@@ -41,31 +41,73 @@ const SlideCategorys = () => {
                     <S.Slide ref={Carrosel}>
                          <div className="item">
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/bulba.png" alt="pokemon bulbassaur" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/bulba.png"
+                                        alt="pokemon bulbassaur"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/snorlax.png" alt="pokemon snorlax" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/snorlax.png"
+                                        alt="pokemon snorlax"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/eevee.png" alt=" pokemon eevee" width={100} height={100} />
+                                   <Image src="/assets/poke/eevee.png" alt=" pokemon eevee" width={100} height={100} priority />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/psyduck.png" alt="pokemon psyduck" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/psyduck.png"
+                                        alt="pokemon psyduck"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/squirtle.png" alt="pokemon squirtle" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/squirtle.png"
+                                        alt="pokemon squirtle"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/caterpie.png" alt="pokemon caterpie" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/caterpie.png"
+                                        alt="pokemon caterpie"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/dratini.png" alt="pokemon dratini" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/dratini.png"
+                                        alt="pokemon dratini"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/abra.png" alt="pokemon abra" width={100} height={100} />
+                                   <Image src="/assets/poke/abra.png" alt="pokemon abra" width={100} height={100} priority />
                               </Link>
                               <Link href="/telefonia">
-                                   <Image src="/assets/poke/bellsprout.png" alt="pokemon bellsprout" width={100} height={100} />
+                                   <Image
+                                        src="/assets/poke/bellsprout.png"
+                                        alt="pokemon bellsprout"
+                                        width={100}
+                                        height={100}
+                                        priority
+                                   />
                               </Link>
                          </div>
                          <div className="item">
@@ -76,6 +118,7 @@ const SlideCategorys = () => {
                                         alt="pokemon abra"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -85,6 +128,7 @@ const SlideCategorys = () => {
                                         alt="pokemon abra"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -94,6 +138,7 @@ const SlideCategorys = () => {
                                         alt="pokemon bellsprout"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -103,6 +148,7 @@ const SlideCategorys = () => {
                                         alt="pokemon bellsprout"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -112,6 +158,7 @@ const SlideCategorys = () => {
                                         alt="pokemon caterpie"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -121,6 +168,7 @@ const SlideCategorys = () => {
                                         alt="pokemon dratini"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -130,6 +178,7 @@ const SlideCategorys = () => {
                                         alt="pokemon caterpie"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -139,6 +188,7 @@ const SlideCategorys = () => {
                                         alt="pokemon dratini"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                               <Link href="/telefonia">
@@ -148,6 +198,7 @@ const SlideCategorys = () => {
                                         alt="pokemon bellsprout"
                                         width={80}
                                         height={80}
+                                        priority
                                    />
                               </Link>
                          </div>

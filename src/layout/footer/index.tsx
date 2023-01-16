@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GrFacebook } from "react-icons/gr";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import { FaYoutubeSquare } from "react-icons/fa";
-
+import Image from "next/image";
 const Footer = () => {
      console.log("footer render");
      return (
@@ -13,10 +13,10 @@ const Footer = () => {
                          <div>
                               <p className="title">Baixe o nosso App</p>
                               <Link href="telefonia">
-                                   <img src="/google.webp" alt="Google play" style={{ width: "100px", height: "45px" }} />
+                                   <Image src="/google.webp" alt="Google play" width={100} height={45} />
                               </Link>
                               <Link href="telefonia">
-                                   <img src="/iphone.webp" alt="Apple Shrefre" style={{ width: "75px", height: "30px" }} />
+                                   <Image src="/iphone.webp" alt="Apple Shrefre" width={75} height={30} />
                               </Link>
                          </div>
                          <div className="redesSociais">
