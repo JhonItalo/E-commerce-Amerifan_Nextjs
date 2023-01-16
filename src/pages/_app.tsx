@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
                     <CarrinhoContext>
                          <Header />
                          <Component {...pageProps} />
-                         <Footer />
                     </CarrinhoContext>
+                    <Footer />
                </ThemeProvider>
                <GlobalStyles />
           </>

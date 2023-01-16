@@ -12,7 +12,7 @@ const Card = ({ pokemon }: props) => {
           <S.Conteiner style={{ flex: "none" }}>
                <>
                     <Link href={`/products/${pokemon.name}`}>
-                         <Image src={pokemon.image} alt={pokemon.name} width={140} height={158} />
+                         <Image src={pokemon.image} alt={pokemon.name} width={140} height={158} priority />
                     </Link>
                     <div className="info">
                          <p className="name">{pokemon.name}</p>
