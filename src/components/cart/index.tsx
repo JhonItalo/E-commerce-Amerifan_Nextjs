@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { BsCart3 } from "react-icons/bs";
-import AccessibleName from "../acessibleLinkName";
+import AccessibleButtonName from "../acessibleButtonName";
 const Cart = () => {
      console.log("cart rende");
      const { storage } = useContext(CartContext);
@@ -12,7 +12,8 @@ const Cart = () => {
                <Link href="/cart">
                     <span>{storage.length > 0 && storage.length}</span>
                     <BsCart3 />
-                    <AccessibleName name="carrinho" />
+
+                    <AccessibleButtonName name="carrinho" />
                </Link>
           </S.Conteiner>
      );
