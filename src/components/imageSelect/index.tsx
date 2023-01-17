@@ -7,7 +7,7 @@ type props = {
      pokemon: any;
 };
 
-const ImageSelect = ({ pokemon }: props) => {
+const ImageSelect = ({ pokemon = "ee" }: props) => {
      console.log("image sleect renser");
      console.log(pokemon, "pokemon");
      const [imageSelect, setImageSelect] = useState<string>("1");

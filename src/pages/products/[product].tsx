@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
+import InfoProducts from "../../components/infoProducts";
 
 import { requestProducts } from "../../request/ProductsRequest";
-import InfoProducts from "../../components/infoProducts";
 
 type props = {
      data: any;
@@ -23,6 +23,7 @@ const Products = ({ data, error }: props) => {
                     padding: "1rem 1rem 1rem 2rem ",
                }}
           >
+               teste
                <InfoProducts pokemon={data} />
           </main>
      );
