@@ -23,7 +23,6 @@ const Products = ({ data, error }: props) => {
                     padding: "1rem 1rem 1rem 2rem ",
                }}
           >
-               teste
                <InfoProducts pokemon={data} />
           </main>
      );
