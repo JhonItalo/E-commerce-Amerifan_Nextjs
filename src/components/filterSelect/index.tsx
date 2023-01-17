@@ -10,11 +10,11 @@ const FilterSelect = () => {
                <ul>
                     <ItemFilter title="Type">
                          <S.SubFilter className="subcategory">
-                              <ItemSubFilter state="type" nameLabel="Grass" id="grass" />
                               <ItemSubFilter state="type" nameLabel="Water" id="water" />
                               <ItemSubFilter state="type" nameLabel="Fire" id="fire" />
                               <ItemSubFilter state="type" nameLabel="Electric" id="electric" />
                               <ItemSubFilter state="type" nameLabel="Ice" id="ice" />
+                              <ItemSubFilter state="type" nameLabel="Grass" id="grass" />
                               <ItemSubFilter state="type" nameLabel="Fighting" id="fighting" />
                               <ItemSubFilter state="type" nameLabel="Ground" id="ground" />
                               <ItemSubFilter state="type" nameLabel="Poison" id="poison" />

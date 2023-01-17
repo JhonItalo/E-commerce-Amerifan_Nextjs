@@ -4,6 +4,8 @@ import { GrFacebook } from "react-icons/gr";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import { FaYoutubeSquare } from "react-icons/fa";
 import Image from "next/image";
+import AccessibleName from "../../components/acessibleLinkName";
+import AccessibleButtonName from "../../components/acessibleButtonName";
 const Footer = () => {
      console.log("footer render");
      return (
@@ -14,9 +16,11 @@ const Footer = () => {
                               <p className="title">Baixe o nosso App</p>
                               <Link href="telefonia">
                                    <Image src="/google.webp" alt="Google play" width={100} height={45} />
+                                   <AccessibleName name="google play" />
                               </Link>
                               <Link href="telefonia">
-                                   <Image src="/iphone.webp" alt="Apple Shrefre" width={75} height={30} />
+                                   <Image src="/iphone.webp" alt="Apple store" width={75} height={30} />
+                                   <AccessibleName name="apple store" />
                               </Link>
                          </div>
                          <div className="redesSociais">
@@ -24,12 +28,15 @@ const Footer = () => {
                               <div className="icons">
                                    <Link href="/telefonia">
                                         <GrFacebook />
+                                        <AccessibleButtonName name="vá para o facebook" />
                                    </Link>
                                    <Link href="/telefonia">
                                         <AiFillTwitterSquare />
+                                        <AccessibleButtonName name="vá para o facebook" />
                                    </Link>
                                    <Link href="/telefonia">
                                         <FaYoutubeSquare />
+                                        <AccessibleButtonName name="vá para o facebook" />
                                    </Link>
                               </div>
                          </div>

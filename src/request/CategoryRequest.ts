@@ -1,7 +1,7 @@
 export const URL = "https://pokeapi.co/api/v2/pokemon/";
 
 const generateArrayPromises = () => {
-     const numberPokemons = 10;
+     const numberPokemons = 151;
      const fetchPokemons: any[] = [];
      for (let i = 1; i <= numberPokemons; i++) {
           fetchPokemons.push(

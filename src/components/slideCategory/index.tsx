@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import AccessibleName from "../acessibleLinkName";
+import { Item } from "../../layout/footer/styles";
+import AccessibleButtonName from "../acessibleButtonName";
 
 const SlideCategorys = () => {
      const Carrosel = useRef<HTMLDivElement | null>(null);
@@ -48,6 +51,7 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon bulbassaur" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -57,9 +61,11 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon snorlax" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image src="/assets/poke/eevee.png" alt=" pokemon eevee" width={100} height={100} priority />
+                                   <AccessibleName name=" imagem do pokemon eevee" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -69,6 +75,7 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon psyduck" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -78,6 +85,7 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon squirtle" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -87,6 +95,7 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon caterpie" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -96,9 +105,11 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon dratini" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image src="/assets/poke/abra.png" alt="pokemon abra" width={100} height={100} priority />
+                                   <AccessibleName name=" imagem do pokemon abra" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -108,6 +119,7 @@ const SlideCategorys = () => {
                                         height={100}
                                         priority
                                    />
+                                   <AccessibleName name=" imagem do pokemon bellsprout" />
                               </Link>
                          </div>
                          <div className="item">
@@ -120,6 +132,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -130,6 +143,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -140,6 +154,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -150,6 +165,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -160,6 +176,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -170,6 +187,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -180,6 +198,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -190,6 +209,7 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                               <Link href="/telefonia">
                                    <Image
@@ -200,14 +220,17 @@ const SlideCategorys = () => {
                                         height={80}
                                         priority
                                    />
+                                   <AccessibleName name="pokeball" />
                               </Link>
                          </div>
                     </S.Slide>
                     <button className="previous btn_slide" onClick={() => handlePreviousSlide()}>
                          <IoIosArrowBack />
+                         <AccessibleButtonName name="previous slide" />
                     </button>
                     <button className="next btn_slide" onClick={() => handleNextSlide()}>
                          <IoIosArrowForward />
+                         <AccessibleButtonName name="nest slide" />
                     </button>
                </S.ConteinerSlide>
           </S.Conteiner>

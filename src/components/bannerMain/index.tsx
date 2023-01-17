@@ -3,6 +3,8 @@ import * as S from "./styles";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import AccessibleName from "../acessibleLinkName";
+import AccessibleButtonName from "../acessibleButtonName";
 
 const BannerMain = () => {
      const Carrosel = useRef<HTMLDivElement | null>(null);
@@ -65,6 +67,7 @@ const BannerMain = () => {
                     <S.Slide ref={Carrosel}>
                          <Link href="/telefonia">
                               <Image src="/assets/banner/banner1.webp" alt="70% de desconto" layout="fill" objectFit="cover" />
+                              <AccessibleName name="70% de desconto" />
                          </Link>
                          <Link href="/telefonia">
                               <Image
@@ -74,30 +77,52 @@ const BannerMain = () => {
                                    layout="fill"
                                    objectFit="cover"
                               />
+                              <AccessibleName name="promo~ção black friday" />
                          </Link>
                          <Link href="/telefonia">
                               <Image src="/assets/banner/banner1.webp" alt="ganhe premios" layout="fill" objectFit="cover" />
+                              <AccessibleName name="ganhe premios" />
                          </Link>
                     </S.Slide>
 
                     <button className="next btn_slide" onClick={handleNextSlide}>
                          <IoIosArrowForward />
+                         <AccessibleButtonName name="next slde" />
                     </button>
                     <button className="previous btn_slide" onClick={handlePreviousSlide}>
                          <IoIosArrowBack />
+                         <AccessibleButtonName name="previous slide" />
                     </button>
                </S.ConteinerSlide>
 
                <S.Radios>
-                    <button onClick={handleRadio1}></button>
-                    <button onClick={handleRadio2}></button>
-                    <button onClick={handleRadio3}></button>
-                    <button onClick={handleRadio1}></button>
-                    <button onClick={handleRadio2}></button>
-                    <button onClick={handleRadio3}></button>
-                    <button onClick={handleRadio1}></button>
-                    <button onClick={handleRadio2}></button>
-                    <button onClick={handleRadio3}></button>
+                    <button onClick={handleRadio1}>
+                         <AccessibleButtonName name="imagem 1" />
+                    </button>
+                    <button onClick={handleRadio2}>
+                         <AccessibleButtonName name="imagem 2" />
+                    </button>
+                    <button onClick={handleRadio3}>
+                         <AccessibleButtonName name="imagem 3" />
+                    </button>
+                    <button onClick={handleRadio1}>
+                         <AccessibleButtonName name="imagem 4" />
+                    </button>
+                    <button onClick={handleRadio2}>
+                         <AccessibleButtonName name="imagem 5" />
+                    </button>
+                    <button onClick={handleRadio3}>
+                         <AccessibleButtonName name="imagem 6" />
+                    </button>
+                    <button onClick={handleRadio1}>
+                         <AccessibleButtonName name="imagem 7" />
+                    </button>
+                    <button onClick={handleRadio2}>
+                         <AccessibleButtonName name="imagem 8" />
+                    </button>
+                    <button onClick={handleRadio3}>
+                         <AccessibleButtonName name="imagem 9" />
+                    </button>
                </S.Radios>
                <div className="whiteRow" />
           </S.Banner>

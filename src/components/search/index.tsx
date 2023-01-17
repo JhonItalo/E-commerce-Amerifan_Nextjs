@@ -1,10 +1,11 @@
 import { useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import * as S from "./styles";
-import { pokemonSmall } from "../../types/types"
+import { pokemonSmall } from "../../types/types";
 import { FiSearch } from "react-icons/fi";
 import UseFilterPokemons from "../../hooks/useFilterPokemons";
 import { fetchData } from "../../request/BuscaFetch";
+import AccessibleButtonName from "../acessibleButtonName";
 
 const Search = () => {
      console.log("busca render");
@@ -35,8 +36,8 @@ const Search = () => {
                     placeholder="O que você está procurando?"
                />
                <button className="iconSearch">
-                  
                     <FiSearch />
+                    <AccessibleButtonName name="buscar" />
                </button>
                {activeModal && filterPokemons.length > 0 && (
                     <S.ModalSearch>

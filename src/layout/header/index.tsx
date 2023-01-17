@@ -5,6 +5,7 @@ import Search from "../../components/search";
 import Cart from "../../components/cart";
 import Logo from "../../components/logo";
 import { HiOutlineUser } from "react-icons/hi";
+import AccessibleName from "../../components/acessibleLinkName";
 
 const Header = () => {
      console.log("header render");
@@ -13,9 +14,16 @@ const Header = () => {
                <S.InitialPromotionSpan>developer: johh Italo</S.InitialPromotionSpan>
                <S.Content>
                     <S.Atendimento>
-                         <Link href="/telefonia">Chame o vendedor</Link>
-                         <Link href="/telefonia">Atendimento</Link>
-                         <Link href="/telefonia">Lista de Presents</Link>
+                         <Link href="/telefonia">
+                              Chame o vendedor
+                              <AccessibleName name="chame o vendedor" />
+                         </Link>
+                         <Link href="/telefonia">
+                              Atendimento <AccessibleName name="atendimento" />
+                         </Link>
+                         <Link href="/telefonia">
+                              Lista de Presents <AccessibleName name="lista de presents" />
+                         </Link>
                     </S.Atendimento>
 
                     <S.MainContent>

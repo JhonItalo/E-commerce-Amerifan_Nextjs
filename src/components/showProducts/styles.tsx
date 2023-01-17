@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Conteiner = styled.div`
+export const Conteiner = styled.section`
      background-image: url("/assets/background/SPbackground.webp");
      width: 90%;
      height: 435px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductsByCategory = styled.main`
+export const ProductsByCategory = styled.div`
      background-color: white;
      padding: 3rem 4rem;
      h2 {
