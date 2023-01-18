@@ -2,13 +2,13 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import ProductsByCategory from "../components/productsByCategory";
 import DataProvider from "../contexts/DataProviderContext";
-import { resolveListRequests } from "../request/TelefoniaRequest";
+import { resolveListRequests } from "../request/EletrodomesticosRequest";
 
 type props = {
      data: any[];
 };
 
-const Telefonia = ({ data }: props) => {
+const Eletrodomesticos = ({ data }: props) => {
      console.log(data);
      return (
           <>
@@ -25,7 +25,7 @@ const Telefonia = ({ data }: props) => {
      );
 };
 
-export default Telefonia;
+export default Eletrodomesticos;
 
 export const getStaticProps: GetStaticProps = async () => {
      const { data, error } = await resolveListRequests();
