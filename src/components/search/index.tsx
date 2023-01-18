@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import Link from "next/link";
 import * as S from "./styles";
 import { pokemonSmall } from "../../types/types";

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 import ButtonAddCart from "../buttonAddCart/index";
 import AccessibleButtonName from "../acessibleButtonName";
+import { useRouter } from "next/router";
 
 type props = {
      pokemon: any;
@@ -9,8 +10,14 @@ type props = {
 
 const ProductsInfo = ({ pokemon }: props) => {
      console.log("products info render");
+     const router = useRouter();
      const [color, setColor] = useState<string>("white");
      const [size, setSize] = useState<string>("s");
+
+     useEffect(() => {
+          setColor("white");
+          setSize("s");
+     }, [router.query.product]);
 
      return (
           <S.Conteiner>

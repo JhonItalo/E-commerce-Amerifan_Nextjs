@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccessibleName from "../acessibleLinkName";
+import { useRouter } from "next/router";
 
 import * as S from "./styles";
 
@@ -10,7 +11,13 @@ type props = {
 const ImageSelect = ({ pokemon = "ee" }: props) => {
      console.log("image sleect renser");
      console.log(pokemon, "pokemon");
+     const router = useRouter();
      const [imageSelect, setImageSelect] = useState<string>("1");
+
+     useEffect(() => {
+          setImageSelect("1");
+     }, [router.query.product]);
+
      return (
           <S.Conteiner>
                <S.ButtonsSelect>

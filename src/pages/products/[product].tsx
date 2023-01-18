@@ -51,12 +51,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
      return {
           props: { data: data },
-          revalidate: 86400,
+          revalidate: 60 * 60,
      };
 };
 export const getStaticPaths: GetStaticPaths = async () => {
      return {
-          paths: [{ params: { product: "abra" } }],
+          paths: [{ params: { product: "abra" } }, { params: { product: "bulbasaur" } }],
           fallback: true,
      };
 };

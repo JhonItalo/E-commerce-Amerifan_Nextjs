@@ -1,6 +1,9 @@
+
+
 import ImageSelect from "../imageSelect";
 import ProductsInfo from "../productInfo";
 import * as S from "./styles";
+
 
 type props = {
      pokemon: any;
@@ -8,6 +11,7 @@ type props = {
 
 const InfoProducts = ({ pokemon }: props) => {
      console.log(pokemon);
+ 
      return (
           <>
                {pokemon && (
