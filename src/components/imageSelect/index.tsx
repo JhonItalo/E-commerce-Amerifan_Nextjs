@@ -10,7 +10,6 @@ type props = {
 
 const ImageSelect = ({ pokemon = "ee" }: props) => {
      console.log("image sleect renser");
-     console.log(pokemon, "pokemon");
      const router = useRouter();
      const [imageSelect, setImageSelect] = useState<string>("1");
 

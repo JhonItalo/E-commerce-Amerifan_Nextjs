@@ -17,9 +17,9 @@ const Card = ({ pokemon }: props) => {
                     <div className="info">
                          <p className="name">{pokemon.name}</p>
                          <div className="type">
-                              {pokemon.types.map((pokemon: any) => (
-                                   <S.Type color={pokemon.type.name} key={pokemon.type.name}>
-                                        {pokemon.type.name}
+                              {pokemon.types.map((type: string) => (
+                                   <S.Type color={type} key={type}>
+                                        {type}
                                    </S.Type>
                               ))}
                          </div>

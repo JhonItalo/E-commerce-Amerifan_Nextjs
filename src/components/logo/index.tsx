@@ -1,5 +1,6 @@
 import * as S from "./styles";
 import Link from "next/link";
+import Image from "next/image";
 
 const Logo = () => {
      console.log("logo render");

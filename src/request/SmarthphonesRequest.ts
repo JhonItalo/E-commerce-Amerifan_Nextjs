@@ -18,7 +18,7 @@ const generateArrayPromises = () => {
                               name: data.name,
                               id: data.id,
                               image: data.sprites.other.dream_world.front_default,
-                              types: data.types
+                              types: data.types.map((pokemon: any) => pokemon.type.name)
                          }
                          return pokemon
                     })

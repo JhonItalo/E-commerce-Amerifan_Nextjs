@@ -3,9 +3,10 @@ import { GetStaticProps } from "next";
 import ProductsByCategory from "../components/productsByCategory";
 import DataProvider from "../contexts/DataProviderContext";
 import { resolveListRequests } from "../request/TelefoniaRequest";
+import { pokemonInfo } from "../types/types";
 
 type props = {
-     data: any[];
+     data: pokemonInfo[];
 };
 
 const Telefonia = ({ data }: props) => {

@@ -1,7 +1,8 @@
 import React, { createContext } from "react";
+import { pokemonInfo } from "../types/types";
 
 export type DatacontextType = {
-     data: any[];
+     data: pokemonInfo[];
 };
 
 export const DataProviderContext = createContext<DatacontextType>({ data: [] });
