@@ -6,6 +6,7 @@ import { FiSearch } from "react-icons/fi";
 import UseFilterPokemons from "../../hooks/useFilterPokemons";
 import { fetchData } from "../../request/BuscaFetch";
 import AccessibleButtonName from "../acessibleButtonName";
+import AccessibleName from "../acessibleLinkName";
 
 const Search = () => {
      console.log("busca render");
@@ -39,6 +40,19 @@ const Search = () => {
                     <FiSearch />
                     <AccessibleButtonName name="buscar" />
                </button>
+               <S.Atendimento>
+                    <Link href="/telefonia">
+                         Chame o vendedor
+                         <AccessibleName name="chame o vendedor" />
+                    </Link>
+                    <Link href="/telefonia">
+                         Atendimento <AccessibleName name="atendimento" />
+                    </Link>
+                    <Link href="/telefonia">
+                         Lista de Presents <AccessibleName name="lista de presents" />
+                    </Link>
+               </S.Atendimento>
+
                {activeModal && filterPokemons.length > 0 && (
                     <S.ModalSearch>
                          {filterPokemons.map((item: pokemonSmall) => (

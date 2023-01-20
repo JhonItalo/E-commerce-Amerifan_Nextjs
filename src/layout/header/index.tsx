@@ -5,27 +5,25 @@ import Search from "../../components/search";
 import Cart from "../../components/cart";
 import Logo from "../../components/logo";
 import { HiOutlineUser } from "react-icons/hi";
-import AccessibleName from "../../components/acessibleLinkName";
+
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 const Header = () => {
      console.log("header render");
      return (
           <S.Header>
-               <S.InitialPromotionSpan>developer: johh Italo</S.InitialPromotionSpan>
+               <S.InitialPromotionSpan>
+                    <p className="developer">Developer by John Ítalo Lima Lima</p>
+                    <div>
+                         <Link href="https://www.linkedin.com/in/johnitalodev/">
+                              <AiFillLinkedin />
+                         </Link>
+                         <Link href="https://github.com/JhonItalo">
+                              <AiFillGithub />
+                         </Link>
+                    </div>
+               </S.InitialPromotionSpan>
                <S.Content>
-                    <S.Atendimento>
-                         <Link href="/telefonia">
-                              Chame o vendedor
-                              <AccessibleName name="chame o vendedor" />
-                         </Link>
-                         <Link href="/telefonia">
-                              Atendimento <AccessibleName name="atendimento" />
-                         </Link>
-                         <Link href="/telefonia">
-                              Lista de Presents <AccessibleName name="lista de presents" />
-                         </Link>
-                    </S.Atendimento>
-
                     <S.MainContent>
                          <Logo />
                          <Search />

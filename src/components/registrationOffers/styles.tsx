@@ -51,5 +51,6 @@ export const Conteiner = styled.div`
           padding: 0rem 2rem;
           background-color: #f9bd00;
           border: none;
+          cursor: pointer;
      }
 `;

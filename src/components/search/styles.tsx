@@ -54,3 +54,14 @@ export const ModalSearch = styled.ul`
           }
      }
 `;
+export const Atendimento = styled.div`
+     position: absolute;
+     top: -50%;
+     font-size: 0.8rem;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 2rem;
+     color: white;
+     //background-color: red;
+`;

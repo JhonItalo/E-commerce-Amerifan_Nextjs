@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import * as S from "./styles";
-import { DataProviderContext } from "../../contexts/DataProviderContext";
+import { DataProviderContext, DatacontextType } from "../../contexts/DataProviderContext";
 import { FilterProviderContext, FiltercontextType } from "../../contexts/FilterContext";
 import Card from "../card/index";
 import { pokemonInfo } from "../../types/types";
@@ -8,7 +8,7 @@ import { pokemonInfo } from "../../types/types";
 const AllFilterPokemonsList = () => {
      console.log("list filter render");
 
-     const { data } = useContext(DataProviderContext);
+     const { data } = useContext<DatacontextType>(DataProviderContext);
      const { filterAtual } = useContext<FiltercontextType>(FilterProviderContext);
 
      const type: pokemonInfo[] = data.filter((item: pokemonInfo) => {

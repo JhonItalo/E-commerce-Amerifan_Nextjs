@@ -12,7 +12,7 @@ const SlideCategorys = () => {
      const Carrosel = useRef<HTMLDivElement | null>(null);
 
      useEffect(() => {
-          const auhrefmaticSlideTimer = setInterval(() => {
+          const autoSlideTimer = setInterval(() => {
                if (Carrosel.current && Carrosel.current.scrollLeft === 0) {
                     Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
                } else if (Carrosel.current && Carrosel.current.scrollLeft > 0) {
@@ -20,7 +20,7 @@ const SlideCategorys = () => {
                }
           }, 5000);
 
-          return () => clearInterval(auhrefmaticSlideTimer);
+          return () => clearInterval(autoSlideTimer);
      }, []);
 
      const handleNextSlide = () => {

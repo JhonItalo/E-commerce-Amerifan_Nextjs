@@ -49,26 +49,26 @@ const ProductsInfo = ({ pokemon }: props) => {
                               <AccessibleButtonName name="select color white" />
                          </button>
                          <button
-                              style={{ background: "blue", border: `${color === "blue" ? "1px solid black" : ""}` }}
-                              onClick={() => setColor("blue")}
+                              style={{ background: "#2a258b", border: `${color === "#2a258b" ? "1px solid black" : ""}` }}
+                              onClick={() => setColor("#2a258b")}
                          >
                               <AccessibleButtonName name="select color blue" />
                          </button>
                          <button
-                              style={{ background: "green", border: `${color === "green" ? "1px solid black" : ""}` }}
-                              onClick={() => setColor("green")}
+                              style={{ background: "#628049", border: `${color === "#628049" ? "1px solid black" : ""}` }}
+                              onClick={() => setColor("#628049")}
                          >
                               <AccessibleButtonName name="select color green" />
                          </button>
                          <button
-                              style={{ background: "yellow", border: `${color === "yellow" ? "1px solid black" : ""}` }}
-                              onClick={() => setColor("yellow")}
+                              style={{ background: "#e4e048", border: `${color === "#e4e048" ? "1px solid black" : ""}` }}
+                              onClick={() => setColor("#e4e048")}
                          >
                               <AccessibleButtonName name="select color yellow" />
                          </button>
                          <button
-                              style={{ background: "red", border: `${color === "red" ? "1px solid black" : ""}` }}
-                              onClick={() => setColor("red")}
+                              style={{ background: "#cd491f", border: `${color === "#cd491f" ? "1px solid black" : ""}` }}
+                              onClick={() => setColor("#cd491f")}
                          >
                               <AccessibleButtonName name="select color red" />
                          </button>
@@ -77,19 +77,49 @@ const ProductsInfo = ({ pokemon }: props) => {
                <S.SizeSelect>
                     <span>Size</span>
                     <div>
-                         <button style={{ background: `${size === "s" ? "#f0e68c" : ""}` }} onClick={() => setSize("s")}>
+                         <button
+                              style={{
+                                   background: `${size === "s" ? "#5f9ea0" : ""}`,
+                                   color: `${size === "s" ? "white" : "black"}`,
+                              }}
+                              onClick={() => setSize("s")}
+                         >
                               s
                          </button>
-                         <button style={{ background: `${size === "m" ? "#f0e68c" : ""}` }} onClick={() => setSize("m")}>
+                         <button
+                              style={{
+                                   background: `${size === "m" ? "#5f9ea0" : ""}`,
+                                   color: `${size === "m" ? "white" : "black"}`,
+                              }}
+                              onClick={() => setSize("m")}
+                         >
                               m
                          </button>
-                         <button style={{ background: `${size === "l" ? "#f0e68c" : ""}` }} onClick={() => setSize("l")}>
+                         <button
+                              style={{
+                                   background: `${size === "l" ? "#5f9ea0" : ""}`,
+                                   color: `${size === "l" ? "white" : "black"}`,
+                              }}
+                              onClick={() => setSize("l")}
+                         >
                               l
                          </button>
-                         <button style={{ background: `${size === "xl" ? "#f0e68c" : ""}` }} onClick={() => setSize("xl")}>
+                         <button
+                              style={{
+                                   background: `${size === "xl" ? "#5f9ea0" : ""}`,
+                                   color: `${size === "xl" ? "white" : "black"}`,
+                              }}
+                              onClick={() => setSize("xl")}
+                         >
                               xl
                          </button>
-                         <button style={{ background: `${size === "xxl" ? "#f0e68c" : ""}` }} onClick={() => setSize("xxl")}>
+                         <button
+                              style={{
+                                   background: `${size === "xxl" ? "#5f9ea0" : ""}`,
+                                   color: `${size === "xxl" ? "white" : "black"}`,
+                              }}
+                              onClick={() => setSize("xxl")}
+                         >
                               xxl
                          </button>
                     </div>

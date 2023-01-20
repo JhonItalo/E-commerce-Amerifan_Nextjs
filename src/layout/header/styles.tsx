@@ -10,30 +10,39 @@ export const InitialPromotionSpan = styled.div`
      height: 20%;
      background-color: black;
      color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+     .developer {
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-style: italic;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+     }
+     div {
+          font-size: 1.5rem;
+          display: flex;
+          gap: 0.5rem;
+     }
 `;
 export const Content = styled.div`
      width: 100%;
      height: 55%;
      padding: 0 5rem;
-`;
-export const Atendimento = styled.div`
-     width: 100%;
-     height: 40%;
-     padding-left: 20%;
-     font-size: 0.8rem;
+
      display: flex;
      align-items: center;
-     gap: 1.5rem;
-     color: white;
 `;
 export const MainContent = styled.div`
+     flex: none;
      width: 100%;
      height: 55%;
+     margin-top: 2rem;
      padding-bottom: 1rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     //background-color: #0060b1;
      background-color: #000336;
 `;
 export const Account = styled.div`
