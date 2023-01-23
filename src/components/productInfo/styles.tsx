@@ -119,6 +119,7 @@ export const Frete = styled.div`
                border: none;
                background-color: #134354;
                color: white;
+               cursor: pointer;
           }
      }
 `;

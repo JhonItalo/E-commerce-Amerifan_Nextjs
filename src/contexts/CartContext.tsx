@@ -10,12 +10,14 @@ export type storageType = {
 type contextType = {
      storage: storageType[];
      setStorage: React.Dispatch<React.SetStateAction<storageType[]>>;
+     addToCart: (name: string, image: string) => void;
+     removeToCart: (name: string) => void;
 };
 const defaultValue = {
      storage: [],
-     setStorage: () => {
-          //nothing
-     },
+     setStorage: () => {},
+     addToCart: () => {},
+     removeToCart: () => {},
 };
 export const CartContext = createContext<contextType>(defaultValue);
 
@@ -24,16 +26,11 @@ interface props {
 }
 const CarrinhoContext = ({ children }: props) => {
      console.log("coxtent render");
-
      const [storage, setStorage] = useState<storageType[]>([]);
-     console.log(storage, "storage");
+     const copyStorage: storageType[] = storage.concat();
      const firstRender = useFirstRender();
 
-     const writingNewValueLocalStorage = () => {
-          localStorage.setItem("carrinho", JSON.stringify(storage));
-     };
      useEffect(() => {
-          console.log("context effect");
           const InicitializeLocalStorage = () => {
                const localStorageString = localStorage.getItem("carrinho");
                if (typeof localStorageString != typeof "string") {
@@ -47,13 +44,47 @@ const CarrinhoContext = ({ children }: props) => {
           setStorage(InicitializeLocalStorage);
      }, []);
 
+     const writingNewValueLocalStorage = () => {
+          localStorage.setItem("carrinho", JSON.stringify(storage));
+     };
+
      useEffect(() => {
           if (firstRender === false) {
                writingNewValueLocalStorage();
           }
      }, [storage]);
 
-     return <CartContext.Provider value={{ storage, setStorage }}>{children}</CartContext.Provider>;
+     const AddNewItem = (name: string, image: string) => {
+          copyStorage.push({ name: name, image: image, count: 1 });
+          setStorage(copyStorage);
+     };
+
+     const AddQuantidadeItem = (index: number) => {
+          copyStorage[index].count = copyStorage[index].count + 1;
+          setStorage(copyStorage);
+     };
+
+     const addToCart = (name: string, image: string) => {
+          for (let index = 0; index < copyStorage.length; index++) {
+               if (copyStorage[index].name === name) {
+                    AddQuantidadeItem(index);
+                    return;
+               }
+          }
+          AddNewItem(name, image);
+          return;
+     };
+     const removeToCart = (name: string) => {
+          for (let index = 0; index < copyStorage.length; index++) {
+               if (copyStorage[index].name === name) {
+                    copyStorage.splice(index, 1);
+                    setStorage(copyStorage);
+                    return;
+               }
+          }
+     };
+
+     return <CartContext.Provider value={{ storage, setStorage, addToCart, removeToCart }}>{children}</CartContext.Provider>;
 };
 
 export default CarrinhoContext;

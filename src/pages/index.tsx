@@ -14,14 +14,12 @@ type props = {
 };
 
 export default function Home({ bestSeller, newProducts }: props) {
-     console.log(bestSeller, "bestseller");
-     console.log(newProducts, "newproducts");
-
+     console.log("home render");
      return (
           <>
                <Head>
                     <title>Home</title>
-                    <meta name="description" content="e-commerce, best seller, new Products" />
+                    <meta name="description" content="e-commerce, best seller, new Products, promoção black friday amerifan" />
                </Head>
 
                <main>
@@ -46,10 +44,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
      return {
           props: {
-               data: data,
                bestSeller: data.concat().splice(0, 8),
                newProducts: data.concat().splice(8, 16),
-               error: error,
           },
      };
 };

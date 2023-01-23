@@ -35,27 +35,27 @@ const Nav = () => {
                     </S.Li>
 
                     <S.Li active={pathname === "/videotv"}>
-                         <Link href="/videotv">
+                         <Link href="/">
                               <p>Tv e vídeo</p>
                          </Link>
                     </S.Li>
                     <S.Li active={pathname === "/moveis"}>
-                         <Link href="/moveis">
+                         <Link href="/">
                               <p>Movéis</p>
                          </Link>
                     </S.Li>
                     <S.Li active={pathname === "/eletroportateis"}>
-                         <Link href="/eletroportateis">
+                         <Link href="/">
                               <p>EletroPortáteis</p>
                          </Link>
                     </S.Li>
                     <S.Li active={pathname === "/informatica"}>
-                         <Link href="/informatica">
+                         <Link href="/">
                               <p>Informática</p>
                          </Link>
                     </S.Li>
                     <S.Li active={pathname === "/servicos"}>
-                         <Link href="/servicos">
+                         <Link href="/">
                               <p>Serviços</p>
                          </Link>
                     </S.Li>

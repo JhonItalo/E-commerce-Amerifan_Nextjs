@@ -12,7 +12,6 @@ const Cart = () => {
                <Link href="/cart">
                     <span>{storage.length > 0 && storage.length}</span>
                     <BsCart3 />
-
                     <AccessibleButtonName name="carrinho" />
                </Link>
           </S.Conteiner>

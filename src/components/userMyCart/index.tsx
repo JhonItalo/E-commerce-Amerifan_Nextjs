@@ -36,7 +36,9 @@ const UserMyCart = () => {
                               }}
                          >
                               {storage.length < 1 ? (
-                                   <p>Carrinho vazio</p>
+                                   <div className="empty">
+                                        <p>Seu carrinho está vazio</p>
+                                   </div>
                               ) : (
                                    storage.map((item: storageType) => (
                                         <ItemCart key={item.name} name={item.name} image={item.image} count={item.count} />

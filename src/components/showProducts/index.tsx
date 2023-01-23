@@ -28,21 +28,19 @@ const ShowProducts = ({ title, data }: props) => {
                <>
                     <h2>{title}</h2>
                     <S.ConteinerSlide>
-                         <>
-                              <S.Slide ref={Carrosel}>
-                                   {data.map((item: any) => (
-                                        <Card key={item.id} pokemon={item} />
-                                   ))}
-                              </S.Slide>
-                              <button className="next btn_slide" onClick={handleScrollright}>
-                                   <p>scrol to right</p>
-                                   <BiRightArrow />
-                              </button>
-                              <button className="previous btn_slide" onClick={handleScrollleft}>
-                                   <p>scrol to left</p>
-                                   <BiLeftArrow />
-                              </button>
-                         </>
+                         <S.Slide ref={Carrosel}>
+                              {data.map((item: any) => (
+                                   <Card key={item.id} pokemon={item} />
+                              ))}
+                         </S.Slide>
+                         <button className="next btn_slide" onClick={handleScrollright}>
+                              <p>scrol to right</p>
+                              <BiRightArrow />
+                         </button>
+                         <button className="previous btn_slide" onClick={handleScrollleft}>
+                              <p>scrol to left</p>
+                              <BiLeftArrow />
+                         </button>
                     </S.ConteinerSlide>
                </>
           </S.Conteiner>

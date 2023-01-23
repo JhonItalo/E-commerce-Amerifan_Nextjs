@@ -15,10 +15,10 @@ const Header = () => {
                <S.InitialPromotionSpan>
                     <p className="developer">Developer by John Ítalo Lima Lima</p>
                     <div>
-                         <Link href="https://www.linkedin.com/in/johnitalodev/">
+                         <Link href="https://www.linkedin.com/in/johnitalodev/" target="_blank">
                               <AiFillLinkedin />
                          </Link>
-                         <Link href="https://github.com/JhonItalo">
+                         <Link href="https://github.com/JhonItalo" target="_blank">
                               <AiFillGithub />
                          </Link>
                     </div>

@@ -58,10 +58,7 @@ export const Slide = styled.div`
      &::-webkit-scrollbar {
           display: none;
      }
-`; /*
-export const Item = styled.img`
-     flex: none;
-`;*/
+`;
 export const Radios = styled.div`
      width: 20%;
      height: 1.5rem;

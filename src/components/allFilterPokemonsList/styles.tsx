@@ -23,4 +23,8 @@ export const ListPokemons = styled.div`
      display: flex;
      flex-wrap: wrap;
      gap: 3rem;
+
+     .controlParentStyle {
+          border: 1px solid rgb(200, 200, 200);
+     }
 `;

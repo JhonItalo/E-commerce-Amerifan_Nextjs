@@ -9,3 +9,9 @@ export type pokemonInfo = {
      image: string;
      types: string[];
 };
+
+type storageType = {
+     name: string;
+     image: string;
+     count: number;
+};

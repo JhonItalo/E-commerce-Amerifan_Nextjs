@@ -44,4 +44,19 @@ export const ListCart = styled.ul`
      border-top: 1px solid grey;
      border-bottom: 1px solid grey;
      overflow-y: scroll;
+
+     .empty {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+               font-size: 2rem;
+          }
+          svg {
+               font-size: 2rem;
+          }
+     }
 `;
