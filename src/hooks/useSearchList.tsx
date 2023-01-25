@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { pokemonSmall } from "../types/types";
 
-const UseFilterPokemons = () => {
+const UseSearchList = () => {
      const [dataPokemons, setDataPokemons] = useState<pokemonSmall[]>([]);
      const [search, setSearch] = useState<string>("");
      const [activeModal, setActiveModal] = useState<boolean>(false);
@@ -13,4 +13,4 @@ const UseFilterPokemons = () => {
      return { search, setSearch, filterPokemons, setDataPokemons, activeModal, setActiveModal };
 };
 
-export default UseFilterPokemons;
+export default UseSearchList;

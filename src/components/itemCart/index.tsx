@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { CartContext, storageType } from "../../contexts/CartContext";
 import * as S from "./styles";
 import Image from "next/image";
+import { CgMathMinus, CgMathPlus } from "react-icons/cg";
 
 const ItemCart = ({ name, image, count }: storageType) => {
-     const { storage, setStorage } = useContext(CartContext);
+     const { storage, setStorage, removeToCart } = useContext(CartContext);
      const copyStorage = storage.concat();
 
      const removeQuantityItem = () => {
@@ -37,27 +38,28 @@ const ItemCart = ({ name, image, count }: storageType) => {
      };
 
      return (
-          <div>
-               <S.Item>
-                    <S.ConteinerFilme>
-                         <Image src={image} alt={`imagem do ${name}`} width={70} height={70} />
-                         <p className="p">x</p>
-                         <div>
-                              <p className="title">{name}</p>
-                         </div>
-                    </S.ConteinerFilme>
-                    <S.CountPrice>
-                         <S.Count>
-                              <button onClick={removeQuantityItem}>-</button>
-                              <p>{count}</p>
-                              <button onClick={addQuantityItem}>+</button>
-                         </S.Count>
-                         <S.Price>
-                              <p>$$$</p>
-                         </S.Price>
-                    </S.CountPrice>
-               </S.Item>
-          </div>
+          <S.Item>
+               <S.ConteinerInfo>
+                    <Image src={image} alt={`imagem do ${name}`} width={70} height={70} />
+                    <p className="p">x</p>
+                    <div>
+                         <p className="title">{name}</p>
+                         <button onClick={() => removeToCart(name)}>Remove</button>
+                    </div>
+               </S.ConteinerInfo>
+               <S.CountPrice>
+                    <button onClick={removeQuantityItem}>
+                         <CgMathMinus />
+                    </button>
+                    <p>{count}</p>
+                    <button onClick={addQuantityItem}>
+                         <CgMathPlus />
+                    </button>
+               </S.CountPrice>
+               <S.Price>
+                    <p>$$$</p>
+               </S.Price>
+          </S.Item>
      );
 };
 

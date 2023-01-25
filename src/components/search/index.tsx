@@ -1,18 +1,20 @@
-import { useCallback, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import Link from "next/link";
 import * as S from "./styles";
 import { pokemonSmall } from "../../types/types";
 import { FiSearch } from "react-icons/fi";
-import UseFilterPokemons from "../../hooks/useFilterPokemons";
+import UseSearchList from "../../hooks/useSearchList";
 import { fetchData } from "../../request/BuscaFetch";
 import AccessibleButtonName from "../acessibleButtonName";
 import AccessibleName from "../acessibleLinkName";
+import { useRouter } from "next/navigation";
 
 const Search = () => {
      console.log("busca render");
      const inputRef = useRef<HTMLInputElement>(null);
+     const router = useRouter();
 
-     const { search, setSearch, filterPokemons, setDataPokemons, activeModal, setActiveModal } = UseFilterPokemons();
+     const { search, setSearch, filterPokemons, setDataPokemons, activeModal, setActiveModal } = UseSearchList();
 
      const handleClickRequest = useCallback(() => {
           fetchData({ setDataPokemons });
@@ -20,6 +22,12 @@ const Search = () => {
 
      const changeInput = (e: React.FormEvent<HTMLInputElement>) => {
           setSearch(e.currentTarget.value.toLowerCase());
+     };
+
+     const handleEnterResult = (e: React.KeyboardEvent<HTMLElement>) => {
+          if (e.key === "Enter") {
+               router.push(`/results/${search}`);
+          }
      };
 
      return (
@@ -33,11 +41,12 @@ const Search = () => {
                     onBlur={() => {
                          const timeCloseModal = setTimeout(() => setActiveModal(false), 200);
                     }}
+                    onKeyDown={handleEnterResult}
                     type="text"
                     placeholder="O que você está procurando?"
                />
                <button className="iconSearch">
-                    <FiSearch />
+                    <FiSearch onClick={() => router.push(`/results/${search}`)} />
                     <AccessibleButtonName name="buscar" />
                </button>
                <S.Atendimento>
