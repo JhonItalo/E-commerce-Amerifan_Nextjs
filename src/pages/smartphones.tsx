@@ -10,7 +10,7 @@ type props = {
 };
 
 const Smarthphone = ({ data }: props) => {
-     console.log(data);
+     console.log("smarthpone render");
      return (
           <>
                <Head>

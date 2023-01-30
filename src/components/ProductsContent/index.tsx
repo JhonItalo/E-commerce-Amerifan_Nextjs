@@ -1,25 +1,22 @@
-
-
 import ImageSelect from "../imageSelect";
 import ProductsInfo from "../productInfo";
 import * as S from "./styles";
-
 
 type props = {
      pokemon: any;
 };
 
-const InfoProducts = ({ pokemon }: props) => {
+const ProductsContent = ({ pokemon }: props) => {
      console.log(pokemon);
- 
+
      return (
           <>
                {pokemon && (
-                    <>
-                         <S.Conteiner>
+                    <S.Conteiner>
+                         <S.ConteinerImageInfo>
                               <ImageSelect pokemon={pokemon} />
                               <ProductsInfo pokemon={pokemon} />
-                         </S.Conteiner>
+                         </S.ConteinerImageInfo>
 
                          <S.Describe>
                               <h3>Describe:</h3>
@@ -84,10 +81,10 @@ const InfoProducts = ({ pokemon }: props) => {
                                    </tbody>
                               </table>
                          </S.TechnicalInformation>
-                    </>
+                    </S.Conteiner>
                )}
           </>
      );
 };
 
-export default InfoProducts;
+export default ProductsContent;

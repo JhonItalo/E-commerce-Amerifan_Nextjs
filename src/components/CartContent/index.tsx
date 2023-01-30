@@ -5,7 +5,7 @@ import ItemCart from "../itemCart";
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
 
-const UserMyCart = () => {
+const CartContent = () => {
      const { storage } = useContext(CartContext);
      return (
           <S.MyCart>
@@ -95,4 +95,4 @@ const UserMyCart = () => {
      );
 };
 
-export default UserMyCart;
+export default CartContent;

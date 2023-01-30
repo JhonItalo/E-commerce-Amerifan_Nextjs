@@ -26,6 +26,8 @@ const Search = () => {
 
      const handleEnterResult = (e: React.KeyboardEvent<HTMLElement>) => {
           if (e.key === "Enter") {
+               setSearch("");
+               inputRef.current?.blur();
                router.push(`/results/${search}`);
           }
      };
@@ -46,7 +48,12 @@ const Search = () => {
                     placeholder="O que você está procurando?"
                />
                <button className="iconSearch">
-                    <FiSearch onClick={() => router.push(`/results/${search}`)} />
+                    <FiSearch
+                         onClick={() => {
+                              setSearch("");
+                              router.push(`/results/${search}`);
+                         }}
+                    />
                     <AccessibleButtonName name="buscar" />
                </button>
                <S.Atendimento>

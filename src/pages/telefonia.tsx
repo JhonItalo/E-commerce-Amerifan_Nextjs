@@ -10,7 +10,7 @@ type props = {
 };
 
 const Telefonia = ({ data }: props) => {
-     console.log(data);
+     console.log("telefonia render");
      return (
           <>
                <Head>

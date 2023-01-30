@@ -10,7 +10,7 @@ type props = {
 };
 
 const Eletrodomesticos = ({ data }: props) => {
-     console.log(data);
+     console.log("eletrodomesticos render");
      return (
           <>
                <Head>

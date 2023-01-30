@@ -1,28 +1,32 @@
 import { GetServerSideProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
+import { ResultsRequest } from "../../request/ResultsRequests";
+import { pokemonSmall } from "../../types/types";
+import ResultsContent from "../../components/resultsContent";
+import { useRouter } from "next/router";
+import useResultsFetch from "../../hooks/useResultsFetch";
 
-type props = {
-     data: any;
-     error: string;
-};
+interface IParams extends ParsedUrlQuery {
+     result: string;
+}
 
-const Results = ({ data, error }: props) => {
-     console.log("products render");
-     console.log(data);
-     console.log(error, "error");
+const Results = () => {
+     console.log("results render");
+     const router = useRouter();
+     const { result } = router.query as IParams;
+     const { data, isLoading, error } = useResultsFetch({ result });
+     console.log(data, "data");
 
      return (
           <>
-               <main
-                    style={{
-                         minHeight: "150vh",
-                         background: "white",
-                         width: "100%",
-                         padding: "1rem 1rem 1rem 2rem ",
-                    }}
-               >
-                    teste
+               <Head>
+                    <title>Home</title>
+                    <meta name="description" content="e-commerce, best seller, new Products, promoção black friday amerifan" />
+               </Head>
+
+               <main>
+                    <ResultsContent data={data} input={result} />
                </main>
           </>
      );
@@ -30,14 +34,18 @@ const Results = ({ data, error }: props) => {
 
 export default Results;
 
-interface IParams extends ParsedUrlQuery {
-     product: string;
-}
+/*
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-     const { result } = context.params as IParams;
+     const { result: search } = context.params as IParams;
+     const { data, error } = await ResultsRequest({ search });
+
+     if (error) {
+          return { notFound: true };
+     }
 
      return {
-          props: { data: "1", error: result },
+          props: { data: data },
      };
 };
+*/

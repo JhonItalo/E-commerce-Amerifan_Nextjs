@@ -1,8 +1,8 @@
 import React from "react";
-import UserMyCart from "../components/userMyCart";
+import CartContent from "../components/CartContent";
 
 const MyCart = () => {
-     return <UserMyCart />;
+     return <CartContent />;
 };
 
 export default MyCart;

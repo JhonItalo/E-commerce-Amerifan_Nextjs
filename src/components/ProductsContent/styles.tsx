@@ -2,16 +2,20 @@ import styled from "styled-components";
 
 export const Conteiner = styled.div`
      width: 100%;
+     padding: 1rem 1rem 1rem 2rem;
+     background-color: white;
+`;
+
+export const ConteinerImageInfo = styled.div`
+     width: 100%;
      //height: 500px;
      padding: 1rem;
      border-radius: 5px;
      display: flex;
      gap: 2rem;
-     background-color: white;
-     // background-color: grey;
+     // background-color: white;
 `;
 export const Describe = styled.section`
-     // margin-top: 2rem;
      h3 {
           margin-bottom: 1rem;
      }

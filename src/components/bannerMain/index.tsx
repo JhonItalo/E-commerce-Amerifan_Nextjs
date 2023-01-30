@@ -66,7 +66,13 @@ const BannerMain = () => {
                <S.ConteinerSlide>
                     <S.Slide ref={Carrosel}>
                          <Link href="/telefonia">
-                              <Image src="/assets/banner/banner1.webp" alt="70% de desconto" layout="fill" objectFit="cover" />
+                              <Image
+                                   src="/assets/banner/banner1.webp"
+                                   alt="70% de desconto"
+                                   layout="fill"
+                                   objectFit="cover"
+                                   priority
+                              />
                               <AccessibleName name="70% de desconto" />
                          </Link>
                          <Link href="/telefonia">
@@ -80,7 +86,13 @@ const BannerMain = () => {
                               <AccessibleName name="promo~ção black friday" />
                          </Link>
                          <Link href="/telefonia">
-                              <Image src="/assets/banner/banner1.webp" alt="ganhe premios" layout="fill" objectFit="cover" />
+                              <Image
+                                   src="/assets/banner/banner1.webp"
+                                   alt="ganhe premios"
+                                   layout="fill"
+                                   objectFit="cover"
+                                   priority
+                              />
                               <AccessibleName name="ganhe premios" />
                          </Link>
                     </S.Slide>
