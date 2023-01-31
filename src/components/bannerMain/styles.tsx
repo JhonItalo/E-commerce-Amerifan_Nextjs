@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 export const Banner = styled.div`
      width: 100%;
-     margin-bottom: 3rem;
      display: flex;
      flex-direction: column;
-     gap: 1rem;
+
      .whiteRow {
           width: 95%;
           height: 3rem;
-          margin: 0 auto;
-          margin-top: 1rem;
+          margin: 5rem auto 3rem;
+
           padding: 1rem;
           border-radius: 10px;
           background-color: white;
@@ -38,11 +37,20 @@ export const ConteinerSlide = styled.div`
      .next {
           right: 7%;
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 700px;
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          height: 600px;
+     }
+
+     @media (max-width: 1280px) and (min-width: 1000px) {
+     }
 `;
 
 export const Slide = styled.div`
      width: 100%;
-     height: 500px;
+     height: 100%;
      margin: 0 auto;
      display: flex;
      overflow-y: hidden;
@@ -62,8 +70,11 @@ export const Slide = styled.div`
 export const Radios = styled.div`
      width: 20%;
      height: 1.5rem;
-     margin: 0 auto;
-     margin-top: -0.5rem;
+     position: absolute;
+     left: 50%;
+     bottom: -7%;
+     transform: translate(-50%, 0);
+
      padding: 0 1rem;
      display: flex;
      justify-content: center;

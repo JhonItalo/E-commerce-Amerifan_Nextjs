@@ -105,37 +105,38 @@ const BannerMain = () => {
                          <IoIosArrowBack />
                          <AccessibleButtonName name="previous slide" />
                     </button>
+
+                    <S.Radios>
+                         <button onClick={handleRadio1}>
+                              <AccessibleButtonName name="imagem 1" />
+                         </button>
+                         <button onClick={handleRadio2}>
+                              <AccessibleButtonName name="imagem 2" />
+                         </button>
+                         <button onClick={handleRadio3}>
+                              <AccessibleButtonName name="imagem 3" />
+                         </button>
+                         <button onClick={handleRadio1}>
+                              <AccessibleButtonName name="imagem 4" />
+                         </button>
+                         <button onClick={handleRadio2}>
+                              <AccessibleButtonName name="imagem 5" />
+                         </button>
+                         <button onClick={handleRadio3}>
+                              <AccessibleButtonName name="imagem 6" />
+                         </button>
+                         <button onClick={handleRadio1}>
+                              <AccessibleButtonName name="imagem 7" />
+                         </button>
+                         <button onClick={handleRadio2}>
+                              <AccessibleButtonName name="imagem 8" />
+                         </button>
+                         <button onClick={handleRadio3}>
+                              <AccessibleButtonName name="imagem 9" />
+                         </button>
+                    </S.Radios>
                </S.ConteinerSlide>
 
-               <S.Radios>
-                    <button onClick={handleRadio1}>
-                         <AccessibleButtonName name="imagem 1" />
-                    </button>
-                    <button onClick={handleRadio2}>
-                         <AccessibleButtonName name="imagem 2" />
-                    </button>
-                    <button onClick={handleRadio3}>
-                         <AccessibleButtonName name="imagem 3" />
-                    </button>
-                    <button onClick={handleRadio1}>
-                         <AccessibleButtonName name="imagem 4" />
-                    </button>
-                    <button onClick={handleRadio2}>
-                         <AccessibleButtonName name="imagem 5" />
-                    </button>
-                    <button onClick={handleRadio3}>
-                         <AccessibleButtonName name="imagem 6" />
-                    </button>
-                    <button onClick={handleRadio1}>
-                         <AccessibleButtonName name="imagem 7" />
-                    </button>
-                    <button onClick={handleRadio2}>
-                         <AccessibleButtonName name="imagem 8" />
-                    </button>
-                    <button onClick={handleRadio3}>
-                         <AccessibleButtonName name="imagem 9" />
-                    </button>
-               </S.Radios>
                <div className="whiteRow" />
           </S.Banner>
      );

@@ -7,9 +7,6 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
  }
  body{
- //-image: url("/assets/background/Background.webp");
-  background-repeat: repeat;
-  background-size: cover;
   overflow-x: hidden;
  }
  ul{
@@ -22,6 +19,21 @@ const GlobalStyles = createGlobalStyle`
    &:hover{color:inherit;}
    &:active{color:inherit;}
  }
+
+
+ @media (max-width: 1920px) and (min-width: 1441px) {
+          html{
+            font-size: 20px;
+          }
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          
+     }
+
+     @media (max-width: 1280px) and (min-width: 1000px) {
+     }
+
+
 `;
 
 export default GlobalStyles;

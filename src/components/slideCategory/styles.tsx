@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Conteiner = styled.div`
      width: 100%;
-     height: 20vh;
+     height: 130px;
      position: relative;
 `;
 export const ConteinerSlide = styled.div`

@@ -2,10 +2,8 @@ import React, { useRef, useEffect } from "react";
 import * as S from "./styles";
 import Link from "next/link";
 import Image from "next/image";
-
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import AccessibleName from "../acessibleLinkName";
-import { Item } from "../../layout/footer/styles";
 import AccessibleButtonName from "../acessibleButtonName";
 
 const SlideCategorys = () => {
