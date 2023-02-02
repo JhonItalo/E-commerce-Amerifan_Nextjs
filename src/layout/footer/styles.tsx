@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Footer = styled.div`
      width: 100%;
-     height: 450px;
+     height: 400px;
      padding: 3rem;
      display: flex;
      justify-content: space-around;

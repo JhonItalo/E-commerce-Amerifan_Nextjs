@@ -16,6 +16,7 @@ export const Conteiner = styled.div`
      -webkit-backdrop-filter: blur(4.4px);
      background: rgba(255, 255, 255, 0.24);
      border: 1px solid rgba(255, 255, 255, 0.3);
+
      &:hover {
           border: 1px solid white;
      }
@@ -47,6 +48,16 @@ export const Conteiner = styled.div`
           &:hover {
                background-color: black;
                color: white;
+          }
+     }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          width: 260px;
+          height: 100%;
+          a {
+               img {
+                    width: 160px;
+                    height: 160px;
+               }
           }
      }
 `;

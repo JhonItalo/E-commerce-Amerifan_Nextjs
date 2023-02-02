@@ -4,6 +4,10 @@ export const Conteiner = styled.div`
      width: 100%;
      height: 130px;
      position: relative;
+
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 170px;
+     }
 `;
 export const ConteinerSlide = styled.div`
      width: 75%;
@@ -45,6 +49,17 @@ export const Slide = styled.div`
           align-items: center;
           a {
                position: relative;
+
+               @media (max-width: 1920px) and (min-width: 1441px) {
+                    img {
+                         width: 130px;
+                         height: 130px;
+                    }
+                    .ball {
+                         width: 110px;
+                         height: 110px;
+                    }
+               }
           }
      }
 `;

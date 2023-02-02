@@ -17,7 +17,7 @@ export const Banner = styled.div`
 `;
 export const ConteinerSlide = styled.div`
      width: 100%;
-     height: 500px;
+     height: 550px;
      position: relative;
      .btn_slide {
           width: 2rem;
@@ -43,8 +43,8 @@ export const ConteinerSlide = styled.div`
      @media (max-width: 1440px) and (min-width: 1367px) {
           height: 600px;
      }
-
-     @media (max-width: 1280px) and (min-width: 1000px) {
+     @media (max-width: 1280px) and (min-width: 1100px) {
+          height: 500px;
      }
 `;
 

@@ -5,6 +5,10 @@ export const Header = styled.header`
      background-color: #000336;
      display: flex;
      flex-direction: column;
+
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 300px;
+     }
 `;
 export const InitialPromotionSpan = styled.div`
      height: 20%;
@@ -30,7 +34,6 @@ export const Content = styled.div`
      width: 100%;
      height: 55%;
      padding: 0 5rem;
-
      display: flex;
      align-items: center;
 `;

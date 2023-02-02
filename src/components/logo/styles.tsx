@@ -5,4 +5,11 @@ export const Conteiner = styled.div`
      a {
           position: relative;
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          a {
+               img {
+                    width: 280px;
+               }
+          }
+     }
 `;

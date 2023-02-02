@@ -17,11 +17,16 @@ export const Conteiner = styled.section`
           font-size: 2rem;
           color: white;
      }
+
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 500px;
+     }
 `;
 export const ConteinerSlide = styled.div`
      width: 100%;
      height: 350px;
      position: relative;
+
      .btn_slide {
           background-color: white;
           padding: 0.2rem;
@@ -49,6 +54,9 @@ export const ConteinerSlide = styled.div`
      }
      .previous {
           left: 2%;
+     }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 430px;
      }
 `;
 

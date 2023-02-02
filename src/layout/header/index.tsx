@@ -5,9 +5,9 @@ import Search from "../../components/search";
 import Cart from "../../components/cart";
 import Logo from "../../components/logo";
 import { HiOutlineUser } from "react-icons/hi";
-
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import AccessibleName from "../../components/acessibleLinkName";
+
+import AccessibleButtonName from "../../components/acessibleButtonName";
 
 const Header = () => {
      console.log("header render");
@@ -18,11 +18,12 @@ const Header = () => {
                     <div>
                          <Link href="https://www.linkedin.com/in/johnitalodev/" target="_blank">
                               <AiFillLinkedin />
-                              <AccessibleName name="linkedin" />
+                              <AccessibleButtonName name="linkedin" />
                          </Link>
                          <Link href="https://github.com/JhonItalo" target="_blank">
                               <AiFillGithub />
-                              <AccessibleName name="github" />
+                           
+                              <AccessibleButtonName name="github" />
                          </Link>
                     </div>
                </S.InitialPromotionSpan>
