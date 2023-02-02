@@ -62,6 +62,9 @@ export const Slide = styled.div`
           width: 100%;
           height: 100%;
           position: relative;
+          img {
+               object-fit: cover;
+          }
      }
      &::-webkit-scrollbar {
           display: none;

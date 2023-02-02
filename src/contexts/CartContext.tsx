@@ -27,32 +27,31 @@ interface props {
 const CarrinhoContext = ({ children }: props) => {
      console.log("coxtent render");
      const [storage, setStorage] = useState<storageType[]>([]);
+     console.log(storage, "storage");
      const copyStorage: storageType[] = storage.concat();
      const firstRender = useFirstRender();
 
      useEffect(() => {
-          const InicitializeLocalStorage = () => {
-               const localStorageString = localStorage.getItem("carrinho");
-               if (typeof localStorageString != typeof "string") {
-                    localStorage.setItem("carrinho", "[]");
-                    return [];
-               } else {
-                    const localStorageArray = JSON.parse(localStorageString!);
-                    return localStorageArray;
-               }
-          };
-          setStorage(InicitializeLocalStorage);
-     }, []);
+          if (firstRender === true) {
+               const InicitializeLocalStorage = () => {
+                    const localStorageString = localStorage.getItem("carrinho");
+                    if (typeof localStorageString != typeof "string") {
+                         localStorage.setItem("carrinho", "[]");
+                         return [];
+                    } else {
+                         const localStorageArray = JSON.parse(localStorageString!);
+                         return localStorageArray;
+                    }
+               };
+               setStorage(InicitializeLocalStorage);
+          } else {
+               writingNewValueLocalStorage();
+          }
+     }, [storage]);
 
      const writingNewValueLocalStorage = () => {
           localStorage.setItem("carrinho", JSON.stringify(storage));
      };
-
-     useEffect(() => {
-          if (firstRender === false) {
-               writingNewValueLocalStorage();
-          }
-     }, [storage]);
 
      const AddNewItem = (name: string, image: string) => {
           copyStorage.push({ name: name, image: image, count: 1 });

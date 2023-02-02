@@ -26,14 +26,7 @@ const GlobalStyles = createGlobalStyle`
             font-size: 20px;
           }
      }
-     @media (max-width: 1440px) and (min-width: 1367px) {
-          
-     }
-
-     @media (max-width: 1280px) and (min-width: 1000px) {
-     }
-
-
+   
 `;
 
 export default GlobalStyles;
