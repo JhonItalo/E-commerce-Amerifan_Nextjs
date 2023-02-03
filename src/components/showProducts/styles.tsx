@@ -13,14 +13,18 @@ export const Conteiner = styled.section`
      background-color: white;
      margin-bottom: 3rem;
      position: relative;
+
      h2 {
           font-size: 2rem;
           color: white;
      }
 
      @media (max-width: 1920px) and (min-width: 1441px) {
-          max-width: 1600px;
+          max-width: 1500px;
           height: 500px;
+          padding: 1rem 2rem;
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
           padding: 1rem 2rem;
      }
 `;
@@ -72,5 +76,8 @@ export const Slide = styled.div`
 
      @media (max-width: 1920px) and (min-width: 1441px) {
           gap: 60px;
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          gap: 50px;
      }
 `;

@@ -37,6 +37,12 @@ export const ConteinerInfo = styled.div`
                height: 90px;
           }
      }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          img {
+               width: 80px;
+               height: 80px;
+          }
+     }
 `;
 
 export const CountPrice = styled.div`
