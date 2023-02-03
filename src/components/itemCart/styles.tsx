@@ -31,6 +31,12 @@ export const ConteinerInfo = styled.div`
                font-size: 0.8rem;
           }
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          img {
+               width: 90px;
+               height: 90px;
+          }
+     }
 `;
 
 export const CountPrice = styled.div`

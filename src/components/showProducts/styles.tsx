@@ -19,7 +19,9 @@ export const Conteiner = styled.section`
      }
 
      @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: 1600px;
           height: 500px;
+          padding: 1rem 2rem;
      }
 `;
 export const ConteinerSlide = styled.div`
@@ -67,4 +69,8 @@ export const Slide = styled.div`
      gap: 3%;
      overflow-x: hidden;
      scroll-behavior: smooth;
+
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          gap: 60px;
+     }
 `;

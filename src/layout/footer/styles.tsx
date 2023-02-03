@@ -8,6 +8,10 @@ export const Footer = styled.div`
      justify-content: space-around;
      background-color: #e8e8e8;
      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 550px;
+     }
 `;
 export const Item = styled.div`
      width: 200px;
@@ -15,6 +19,7 @@ export const Item = styled.div`
      display: flex;
      flex-direction: column;
      gap: 1rem;
+
      .title {
           color: #c11a26;
           font-weight: bold;

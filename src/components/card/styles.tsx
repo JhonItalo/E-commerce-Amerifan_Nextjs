@@ -53,10 +53,22 @@ export const Conteiner = styled.div`
      @media (max-width: 1920px) and (min-width: 1441px) {
           width: 260px;
           height: 100%;
+
           a {
                img {
                     width: 160px;
                     height: 160px;
+               }
+          }
+     }
+     @media (max-width: 1280px) and (min-width: 1100px) {
+          width: 220px;
+          height: 330px;
+
+          a {
+               img {
+                    width: 120px;
+                    height: 140px;
                }
           }
      }
