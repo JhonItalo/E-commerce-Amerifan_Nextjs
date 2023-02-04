@@ -1,8 +1,6 @@
-import { GetServerSideProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
-import { ResultsRequest } from "../../request/ResultsRequests";
-import { pokemonSmall } from "../../types/types";
+
 import ResultsContent from "../../components/resultsContent";
 import { useRouter } from "next/router";
 import useResultsFetch from "../../hooks/useResultsFetch";
@@ -26,26 +24,10 @@ const Results = () => {
                </Head>
 
                <main>
-                    <ResultsContent data={data} input={result} />
+                    <ResultsContent data={data} isloading={isLoading} input={result} />
                </main>
           </>
      );
 };
 
 export default Results;
-
-/*
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-     const { result: search } = context.params as IParams;
-     const { data, error } = await ResultsRequest({ search });
-
-     if (error) {
-          return { notFound: true };
-     }
-
-     return {
-          props: { data: data },
-     };
-};
-*/

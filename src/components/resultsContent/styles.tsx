@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Conteiner = styled.div`
      width: 100%;
-     margin-bottom: 5rem;
-     padding-top: 50px;
 
+     padding: 4rem 0rem 5rem;
      background-color: white;
+
      h2 {
           text-align: center;
           font-size: 3.5rem;
@@ -21,6 +21,7 @@ export const Conteiner = styled.div`
 export const inputResults = styled.div`
      width: 50%;
      margin: 25px auto 0;
+     position: relative;
 
      .conteinerinput {
           width: 100%;
@@ -56,24 +57,32 @@ export const inputResults = styled.div`
                }
           }
      }
-     .foundresults {
-          width: 100%;
-          margin-top: 2rem;
-          font-size: 1.5rem;
-          display: block;
-          text-align: center;
-     }
-     .results {
-          width: 100%;
-          margin-top: 2rem;
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          a {
-               display: block;
+     .conteinerResults {
+          min-height: 200px;
+          position: relative;
 
-               text-transform: capitalize;
+          .foundresults {
+               width: 100%;
+               margin-top: 2rem;
+               font-size: 1.5rem;
+               display: block;
+               text-align: center;
+          }
+          .results {
+               width: 100%;
+               max-height: 300px;
+               margin-top: 2rem;
+               align-items: center;
+               display: flex;
+               flex-direction: column;
+               gap: 1rem;
+               overflow: auto;
+
+               a {
+                    display: block;
+
+                    text-transform: capitalize;
+               }
           }
      }
 `;

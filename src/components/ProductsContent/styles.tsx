@@ -16,10 +16,10 @@ export const ConteinerImageInfo = styled.div`
      // background-color: white;
 `;
 export const Describe = styled.section`
+     line-height: 1.6;
      h3 {
           margin-bottom: 1rem;
      }
-     background-color: white;
 `;
 
 export const TechnicalInformation = styled.section`

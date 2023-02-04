@@ -19,6 +19,7 @@ export const ConteinerShopCart = styled.div`
      display: flex;
      flex-direction: column;
      padding: 2rem 3rem 0;
+     position: relative;
 
      .topic {
           display: flex;
@@ -34,6 +35,7 @@ export const ConteinerShopCart = styled.div`
           font-size: 0.7rem;
           display: flex;
           color: grey;
+
           .pd {
                width: 60%;
                text-align: start;
@@ -50,17 +52,18 @@ export const ConteinerShopCart = styled.div`
      }
 
      .backshopping {
-          margin-top: 25px;
-          font-weight: bold;
+          position: absolute;
+          bottom: 7%;
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          font-weight: bold;
           color: #888888;
      }
 `;
 export const ListCart = styled.ul`
      width: 100%;
-     height: 70%;
+     height: 72%;
      padding: 1rem 0;
      display: flex;
      flex-direction: column;
