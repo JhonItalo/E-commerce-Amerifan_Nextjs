@@ -51,7 +51,7 @@ const SlideCategorys = () => {
                                    />
                                    <AccessibleName name=" imagem do pokemon bulbassaur" />
                               </Link>
-                              <Link href="/telefonia">
+                              <Link href="/smartphones">
                                    <Image
                                         src="/assets/poke/snorlax.png"
                                         alt="pokemon snorlax"
@@ -61,7 +61,7 @@ const SlideCategorys = () => {
                                    />
                                    <AccessibleName name=" imagem do pokemon snorlax" />
                               </Link>
-                              <Link href="/telefonia">
+                              <Link href="/eletrodomesticos">
                                    <Image src="/assets/poke/eevee.png" alt=" pokemon eevee" width={100} height={100} priority />
                                    <AccessibleName name=" imagem do pokemon eevee" />
                               </Link>

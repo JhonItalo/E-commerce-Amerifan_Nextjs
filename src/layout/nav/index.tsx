@@ -34,8 +34,8 @@ const Nav = () => {
                          </Link>
                     </S.Li>
 
-                    <S.Li active={pathname === "/videotv"}>
-                         <Link href="/">
+                    <S.Li active={pathname === "/tvevideo"}>
+                         <Link href="/tvevideo">
                               <p>Tv e vídeo</p>
                          </Link>
                     </S.Li>

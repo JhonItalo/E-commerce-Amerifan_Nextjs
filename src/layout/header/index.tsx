@@ -22,7 +22,7 @@ const Header = () => {
                          </Link>
                          <Link href="https://github.com/JhonItalo" target="_blank">
                               <AiFillGithub />
-                           
+
                               <AccessibleButtonName name="github" />
                          </Link>
                     </div>
