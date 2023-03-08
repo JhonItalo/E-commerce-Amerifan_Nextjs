@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import ProductsByCategory from "../components/productsByCategory";
-import DataProvider from "../contexts/DataProviderContext";
+import ProductsByCategory from "../components/categoryContent";
+import DataCategoryProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/TelefoniaRequest";
 import { pokemonInfo } from "../types/types";
+import CategoryContent from "../components/categoryContent";
 
 type props = {
      data: pokemonInfo[];
@@ -18,9 +19,9 @@ const Telefonia = ({ data }: props) => {
                     <meta name="description" content="categoria de pokemons, filtragem de pokemons" />
                </Head>
                <main>
-                    <DataProvider data={data}>
-                         <ProductsByCategory />
-                    </DataProvider>
+                    <DataCategoryProvider data={data}>
+                         <CategoryContent />
+                    </DataCategoryProvider>
                </main>
           </>
      );

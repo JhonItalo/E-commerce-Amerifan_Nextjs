@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Conteiner = styled.div`
      width: 100%;
-     height: 40px;
+     height: 35px;
      background-color: #162258;
      position: relative;
      overflow: hidden;
-     font-size: 1.5rem;
+     font-size: 1.3rem;
      color: white;
      display: flex;
      a {
@@ -24,7 +24,6 @@ export const Conteiner = styled.div`
                left: -150%;
                animation: animate 20s infinite;
                animation-timing-function: linear;
-
                span {
                     font-weight: bold;
                }
@@ -56,10 +55,10 @@ export const Conteiner = styled.div`
           }
      }
      @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 60px;
+          height: 55px;
      }
      @media (max-width: 1440px) and (min-width: 1367px) {
-          height: 45px;
+          height: 40px;
      }
      @media (max-width: 1280px) and (min-width: 1100px) {
           height: 35px;

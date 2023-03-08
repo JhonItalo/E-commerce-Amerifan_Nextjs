@@ -32,6 +32,13 @@ const Search = () => {
           }
      };
 
+     const handleIconResult = () => {
+          if (search.length > 0) {
+               setSearch("");
+               router.push(`/results/${search}`);
+          }
+     };
+
      return (
           <S.Search>
                <input
@@ -48,12 +55,7 @@ const Search = () => {
                     placeholder="O que você está procurando?"
                />
                <button className="iconSearch">
-                    <FiSearch
-                         onClick={() => {
-                              setSearch("");
-                              router.push(`/results/${search}`);
-                         }}
-                    />
+                    <FiSearch onClick={handleIconResult} />
                     <AccessibleButtonName name="buscar" />
                </button>
                <S.Atendimento>

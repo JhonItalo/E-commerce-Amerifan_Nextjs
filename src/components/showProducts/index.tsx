@@ -1,25 +1,28 @@
 import { useContext, useRef } from "react";
 import * as S from "./styles";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Loading from "../loading";
+import { pokemonInfo } from "../../types/types";
+
 import Card from "../card";
-import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 
 type props = {
      title: string;
-     data: any | undefined;
+     data: pokemonInfo[];
 };
 
 const ShowProducts = ({ title, data }: props) => {
-     console.log("Best seller renderizou");
+     console.log("show products", title);
      const Carrosel = useRef<HTMLDivElement | null>(null);
 
      const handleScrollright = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft + 400;
+               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft + 500;
           }
      };
      const handleScrollleft = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft - 400;
+               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft - 500;
           }
      };
 
@@ -28,19 +31,24 @@ const ShowProducts = ({ title, data }: props) => {
                <>
                     <h2>{title}</h2>
                     <S.ConteinerSlide>
-                         <S.Slide ref={Carrosel}>
-                              {data.map((item: any) => (
-                                   <Card key={item.id} pokemon={item} />
-                              ))}
-                         </S.Slide>
-                         <button className="next btn_slide" onClick={handleScrollright}>
-                              <p>scrol to right</p>
-                              <BiRightArrow />
-                         </button>
-                         <button className="previous btn_slide" onClick={handleScrollleft}>
-                              <p>scrol to left</p>
-                              <BiLeftArrow />
-                         </button>
+                         {data && (
+                              <>
+                                   <S.Slide ref={Carrosel}>
+                                        {data.map((item: pokemonInfo) => (
+                                             <Card key={item.id} pokemon={item} width="18%" />
+                                        ))}
+                                   </S.Slide>
+                                   <button className="next btn_slide" onClick={handleScrollright}>
+                                        <p>scrol to right</p>
+                                        <IoIosArrowForward />
+                                   </button>
+                                   <button className="previous btn_slide" onClick={handleScrollleft}>
+                                        <p>scrol to left</p>
+
+                                        <IoIosArrowBack />
+                                   </button>
+                              </>
+                         )}
                     </S.ConteinerSlide>
                </>
           </S.Conteiner>

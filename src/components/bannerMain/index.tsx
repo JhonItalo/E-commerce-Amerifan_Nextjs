@@ -2,23 +2,25 @@ import React, { useRef, useEffect } from "react";
 import * as S from "./styles";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
-import Image from "next/image";
-import AccessibleName from "../acessibleLinkName";
+
 import AccessibleButtonName from "../acessibleButtonName";
+import AccessibleName from "../acessibleLinkName";
 
 const BannerMain = () => {
      const Carrosel = useRef<HTMLDivElement | null>(null);
 
      useEffect(() => {
           const automaticSlideTimer = setInterval(() => {
-               if (Carrosel.current && Carrosel.current.scrollLeft === 0) {
-                    Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
-               } else if (Carrosel.current && Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
-                    Carrosel.current.scrollLeft = Carrosel.current.offsetWidth * 2;
-               } else if (Carrosel.current && Carrosel.current.scrollLeft === Carrosel.current.offsetWidth * 2) {
-                    Carrosel.current.scrollLeft = 0;
-               } else {
-                    return;
+               if (Carrosel.current) {
+                    if (Carrosel.current.scrollLeft === 0) {
+                         Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
+                    } else if (Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
+                         Carrosel.current.scrollLeft = Carrosel.current.scrollWidth - Carrosel.current.offsetWidth;
+                    } else if (Carrosel.current.scrollLeft === Carrosel.current.scrollWidth - Carrosel.current.offsetWidth) {
+                         Carrosel.current.scrollLeft = 0;
+                    } else {
+                         return;
+                    }
                }
           }, 7000);
 
@@ -26,23 +28,27 @@ const BannerMain = () => {
      }, []);
 
      const handleNextSlide = () => {
-          if (Carrosel.current && Carrosel.current.scrollLeft === 0) {
-               Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
-          } else if (Carrosel.current && Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
-               Carrosel.current.scrollLeft = Carrosel.current.offsetWidth * 2;
-          } else {
-               return;
+          if (Carrosel.current) {
+               if (Carrosel.current.scrollLeft === 0) {
+                    Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
+               } else if (Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
+                    Carrosel.current.scrollLeft = Carrosel.current.scrollWidth - Carrosel.current.offsetWidth;
+               } else {
+                    return;
+               }
           }
      };
      const handlePreviousSlide = () => {
-          if (Carrosel.current && Carrosel.current.scrollLeft === 0) {
-               return;
-          } else if (Carrosel.current && Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
-               Carrosel.current.scrollLeft = 0;
-          } else if (Carrosel.current && Carrosel.current.scrollLeft === Carrosel.current.offsetWidth * 2) {
-               Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
-          } else {
-               return;
+          if (Carrosel.current) {
+               if (Carrosel.current.scrollLeft === 0) {
+                    return;
+               } else if (Carrosel.current.scrollLeft === Carrosel.current.offsetWidth) {
+                    Carrosel.current.scrollLeft = 0;
+               } else if (Carrosel.current.scrollLeft === Carrosel.current.scrollWidth - Carrosel.current.offsetWidth) {
+                    Carrosel.current.scrollLeft = Carrosel.current.offsetWidth;
+               } else {
+                    return;
+               }
           }
      };
      const handleRadio1 = () => {
@@ -57,7 +63,7 @@ const BannerMain = () => {
      };
      const handleRadio3 = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft = Carrosel.current.offsetWidth * 2;
+               Carrosel.current.scrollLeft = Carrosel.current.scrollWidth - Carrosel.current.offsetWidth;
           }
      };
 
@@ -66,15 +72,15 @@ const BannerMain = () => {
                <S.ConteinerSlide>
                     <S.Slide ref={Carrosel}>
                          <Link href="/telefonia">
-                              <Image src="/assets/banner/banner1.webp" alt="70% de desconto" fill priority />
+                              <img src="/assets/banner/banner1.webp" alt="70% de desconto" />
                               <AccessibleName name="70% de desconto" />
                          </Link>
                          <Link href="/telefonia">
-                              <Image src="/assets/banner/banner2.webp" alt="promoção Black Friday" fill priority />
+                              <img src="/assets/banner/banner2.webp" alt="promoção Black Friday" />
                               <AccessibleName name="promo~ção black friday" />
                          </Link>
                          <Link href="/telefonia">
-                              <Image src="/assets/banner/banner1.webp" alt="ganhe premios" fill priority />
+                              <img src="/assets/banner/banner1.webp" alt="ganhe premios" />
                               <AccessibleName name="ganhe premios" />
                          </Link>
                     </S.Slide>
@@ -90,36 +96,16 @@ const BannerMain = () => {
 
                     <S.Radios>
                          <button onClick={handleRadio1}>
-                              <AccessibleButtonName name="imagem 1" />
+                              <AccessibleButtonName name="imgm 1" />
                          </button>
                          <button onClick={handleRadio2}>
-                              <AccessibleButtonName name="imagem 2" />
+                              <AccessibleButtonName name="imgm 2" />
                          </button>
                          <button onClick={handleRadio3}>
-                              <AccessibleButtonName name="imagem 3" />
-                         </button>
-                         <button onClick={handleRadio1}>
-                              <AccessibleButtonName name="imagem 4" />
-                         </button>
-                         <button onClick={handleRadio2}>
-                              <AccessibleButtonName name="imagem 5" />
-                         </button>
-                         <button onClick={handleRadio3}>
-                              <AccessibleButtonName name="imagem 6" />
-                         </button>
-                         <button onClick={handleRadio1}>
-                              <AccessibleButtonName name="imagem 7" />
-                         </button>
-                         <button onClick={handleRadio2}>
-                              <AccessibleButtonName name="imagem 8" />
-                         </button>
-                         <button onClick={handleRadio3}>
-                              <AccessibleButtonName name="imagem 9" />
+                              <AccessibleButtonName name="imgm 3" />
                          </button>
                     </S.Radios>
                </S.ConteinerSlide>
-
-               <div className="whiteRow" />
           </S.Banner>
      );
 };

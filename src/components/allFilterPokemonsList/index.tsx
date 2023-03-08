@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import * as S from "./styles";
-import { DataProviderContext, DatacontextType } from "../../contexts/DataProviderContext";
+import { DataProviderContext, DatacontextType } from "../../contexts/DataCategoryProvider";
 import { FilterProviderContext, FiltercontextType } from "../../contexts/FilterContext";
 import Card from "../card/index";
 import { pokemonInfo } from "../../types/types";
@@ -9,24 +9,61 @@ const AllFilterPokemonsList = () => {
      console.log("list filter render");
 
      const { data } = useContext<DatacontextType>(DataProviderContext);
-     const { filterAtual } = useContext<FiltercontextType>(FilterProviderContext);
+     const { type, color } = useContext<FiltercontextType>(FilterProviderContext);
+     const [select, setSelect] = useState<string>("default");
 
-     const type: pokemonInfo[] = data.filter((item: pokemonInfo) => {
-          for (let i = 0; i < item.types.length; i++) {
-               if (filterAtual.type.includes(item.types[i])) {
-                    return item.name;
+     const selectOrder = (select: string) => {
+          if (data) {
+               if (select === "default") {
+                    return data;
+               } else if (select === "name") {
+                    const nameOrder = data.slice().sort((a, b) => {
+                         if (a.name < b.name) {
+                              return -1;
+                         } else {
+                              return 0;
+                         }
+                    });
+                    return nameOrder;
+               } else if (select === "type") {
+                    const typeOrder = data.slice().sort((a, b) => {
+                         if (a.types[0] < b.types[0]) {
+                              return -1;
+                         } else {
+                              return 0;
+                         }
+                    });
+                    return typeOrder;
                }
+          } else {
+               return undefined;
           }
-     });
+     };
 
-     const color: pokemonInfo[] = data.filter((item: pokemonInfo) => {
-          if (filterAtual.color.includes(item.name)) {
-               return item.name;
-          }
-     });
+     const order: pokemonInfo[] | undefined = selectOrder(select);
+     
+     const filterType: pokemonInfo[] =
+          order && type != ""
+               ? order.filter((item: pokemonInfo) => {
+                      for (let i = 0; i < item.types.length; i++) {
+                           if (type.includes(item.types[i])) {
+                                return item.name;
+                           }
+                      }
+                 })
+               : [];
+
+     const filterColor: pokemonInfo[] =
+          order && color != ""
+               ? order.filter((item: pokemonInfo) => {
+                      if (color.includes(item.name)) {
+                           return item.name;
+                      }
+                 })
+               : [];
 
      const processingArrayFilter = () => {
-          const filterConcats = type.concat(color);
+          const filterConcats = filterType.concat(filterColor);
           const removeDuplicate: pokemonInfo[] = [];
 
           filterConcats.forEach((element) => {
@@ -36,46 +73,51 @@ const AllFilterPokemonsList = () => {
           });
           return removeDuplicate;
      };
-     const filtrados: pokemonInfo[] = processingArrayFilter();
+
+     const filtrados = processingArrayFilter();
 
      return (
           <S.ConteinerPokemons>
                <>
-                    {type.length === 0 && color.length === 0 && (
+                    {order && type === "" && color === "" && (
                          <>
                               <div className="titleOrder">
-                                   <p style={{ color: "black" }}>{data.length} resultados encontrados</p>
-                                   <select defaultValue="relevãncia">
-                                        <option value="relevância">relevância</option>
-                                        <option value="mais vendidos">mais vendidos</option>
-                                        <option value="maior preço">maior preço</option>
-                                        <option value="menor preço">menor preço</option>
+                                   <p style={{ color: "black" }}>{order.length} resultados encontrados</p>
+                                   <select
+                                        value={select}
+                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelect(e.currentTarget.value)}
+                                   >
+                                        <option value="default">Creation date</option>
+                                        <option value="name">Name</option>
+                                        <option value="type">Type</option>
                                    </select>
                               </div>
 
                               <S.ListPokemons>
-                                   {data.map((item: any) => (
-                                        <Card key={item.id} pokemon={item} />
+                                   {order.map((item: pokemonInfo) => (
+                                        <Card width="30%" key={item.id} pokemon={item} />
                                    ))}
                               </S.ListPokemons>
                          </>
                     )}
 
-                    {(type.length > 0 || color.length > 0) && (
+                    {(type != "" || color != "") && (
                          <>
                               <div className="titleOrder">
                                    <p style={{ color: "black" }}>{filtrados.length} resultados encontrados</p>
-                                   <select defaultValue="relevãncia">
-                                        <option value="relevância">relevância</option>
-                                        <option value="mais vendidos">mais vendidos</option>
-                                        <option value="maior preço">maior preço</option>
-                                        <option value="menor preço">menor preço</option>
+                                   <select
+                                        value={select}
+                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelect(e.currentTarget.value)}
+                                   >
+                                        <option value="default">Creation date</option>
+                                        <option value="name">Name</option>
+                                        <option value="type">Type</option>
                                    </select>
                               </div>
 
                               <S.ListPokemons>
-                                   {filtrados.map((item: any) => (
-                                        <Card key={item.id} pokemon={item} />
+                                   {filtrados.map((item: pokemonInfo) => (
+                                        <Card width="30%" key={item.id} pokemon={item} />
                                    ))}
                               </S.ListPokemons>
                          </>

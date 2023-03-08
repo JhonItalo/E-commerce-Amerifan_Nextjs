@@ -7,51 +7,51 @@ type props = {
      id: string;
 };
 const ItemSubFilter = ({ state, nameLabel, id }: props) => {
-     const { filterAtual, setFilterAtual } = useContext<FiltercontextType>(FilterProviderContext);
+     const { type, color, setType, setColor } = useContext(FilterProviderContext);
      const inputRefCheck = useRef<HTMLInputElement | null>(null);
 
-     const copyFilter = Object.assign({}, filterAtual);
+     let copyType = type;
+     let copyColor = color;
 
      const removeFilter = () => {
           inputRefCheck.current ? inputRefCheck.current.removeAttribute("checked") : "";
           if (state === "type") {
-               copyFilter.type = `${filterAtual.type.replace(id, "")}`;
+               copyType = copyType.replace(id, "");
+               setType(copyType);
           } else if (state === "color") {
-               copyFilter.color = `${filterAtual.color.replace(id, "")}`;
+               copyColor = copyColor.replace(id, "");
+               setColor(copyColor);
           }
-          return copyFilter;
      };
 
      const addFilter = () => {
           inputRefCheck.current ? inputRefCheck.current.setAttribute("checked", "true") : "";
           if (state === "type") {
-               copyFilter.type = filterAtual.type + id;
+               copyType = copyType + id;
+               setType(copyType);
           } else if (state === "color") {
-               copyFilter.color = filterAtual.color + id;
+               copyColor = copyColor + id;
+               setColor(copyColor);
           }
-          return copyFilter;
-     };
-     const controlFilter = () => {
-          if (state === "type") {
-               if (filterAtual.type.includes(id)) {
-                    return removeFilter();
-               } else {
-                    return addFilter();
-               }
-          } else if (state === "color") {
-               if (filterAtual.color.includes(id)) {
-                    return removeFilter();
-               } else {
-                    return addFilter();
-               }
-          }
-          return copyFilter;
      };
 
      const handleCheckFilter = (e: React.SyntheticEvent) => {
           e.preventDefault();
-          setFilterAtual(controlFilter());
+          if (state === "type") {
+               if (type.includes(id)) {
+                    return removeFilter();
+               } else {
+                    return addFilter();
+               }
+          } else if (state === "color") {
+               if (color.includes(id)) {
+                    return removeFilter();
+               } else {
+                    return addFilter();
+               }
+          }
      };
+
      return (
           <li className="itemSub">
                <label

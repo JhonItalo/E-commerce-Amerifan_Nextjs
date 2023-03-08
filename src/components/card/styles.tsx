@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { colorTypes } from "../../utils/Constains";
 
-export const Conteiner = styled.div`
+type propsConteiner = {
+     width: string;
+};
+
+export const Conteiner = styled.div<propsConteiner>`
      flex: none;
-     width: 236px;
+     width: ${({ width }) => width};
      height: 350px;
      padding: 1rem 0;
      display: flex;
@@ -16,7 +20,6 @@ export const Conteiner = styled.div`
      -webkit-backdrop-filter: blur(4.4px);
      background: rgba(255, 255, 255, 0.24);
      border: 1px solid rgba(255, 255, 255, 0.3);
-
      &:hover {
           border: 1px solid white;
      }
@@ -53,7 +56,6 @@ export const Conteiner = styled.div`
      @media (max-width: 1920px) and (min-width: 1441px) {
           width: 260px;
           height: 100%;
-
           a {
                img {
                     width: 160px;
@@ -64,7 +66,6 @@ export const Conteiner = styled.div`
      @media (max-width: 1280px) and (min-width: 1100px) {
           width: 220px;
           height: 330px;
-
           a {
                img {
                     width: 120px;

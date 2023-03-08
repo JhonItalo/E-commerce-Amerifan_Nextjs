@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Search = styled.div`
-     width: 55%;
+     width: 50%;
      height: 100%;
      padding: 0 0.5rem;
      display: flex;
@@ -57,11 +57,11 @@ export const ModalSearch = styled.ul`
 export const Atendimento = styled.div`
      position: absolute;
      top: -50%;
+     left: 0;
      font-size: 0.8rem;
      display: flex;
      justify-content: start;
      align-items: center;
      gap: 2rem;
      color: white;
-     //background-color: red;
 `;

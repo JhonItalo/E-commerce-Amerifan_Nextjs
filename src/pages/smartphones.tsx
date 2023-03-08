@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import ProductsByCategory from "../components/productsByCategory";
-import DataProvider from "../contexts/DataProviderContext";
+import ProductsByCategory from "../components/categoryContent";
+import DataProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/SmarthphonesRequest";
 import { pokemonInfo } from "../types/types";
 

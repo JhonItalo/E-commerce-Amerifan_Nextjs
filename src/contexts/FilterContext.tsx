@@ -1,32 +1,35 @@
 import React, { createContext } from "react";
-
-export type propsFilterAtual = {
-     type: string;
-     color: string;
-};
+import { pokemonInfo } from "../types/types";
 
 export type FiltercontextType = {
-     filterAtual: propsFilterAtual;
-     setFilterAtual: React.Dispatch<React.SetStateAction<propsFilterAtual>>;
+     type: string;
+     color: string;
+
+     setType: React.Dispatch<React.SetStateAction<string>>;
+     setColor: React.Dispatch<React.SetStateAction<string>>;
 };
 const defaultValue = {
-     filterAtual: { type: "", color: "" },
-     setFilterAtual: () => {
-          //nothing
-     },
+     type: "",
+     color: "",
+     setType: () => {},
+     setColor: () => {},
 };
 export const FilterProviderContext = createContext<FiltercontextType>(defaultValue);
 
 interface props {
-     filterAtual: propsFilterAtual;
-     setFilterAtual: React.Dispatch<React.SetStateAction<propsFilterAtual>>;
+     type: string;
+     color: string;
+     setType: React.Dispatch<React.SetStateAction<string>>;
+     setColor: React.Dispatch<React.SetStateAction<string>>;
      children: React.ReactNode;
 }
 
-const FilterProvider = ({ filterAtual, setFilterAtual, children }: props) => {
+const FilterProvider = ({ type, color, setType, setColor, children }: props) => {
      console.log("context filter provider");
 
-     return <FilterProviderContext.Provider value={{ filterAtual, setFilterAtual }}>{children}</FilterProviderContext.Provider>;
+     return (
+          <FilterProviderContext.Provider value={{ type, color, setType, setColor }}>{children}</FilterProviderContext.Provider>
+     );
 };
 
 export default FilterProvider;

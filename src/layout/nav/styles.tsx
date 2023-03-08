@@ -4,8 +4,9 @@ interface propsLi {
 }
 
 export const Nav = styled.nav`
-     height: 25%;
-     padding: 0 5rem;
+     width: 100%;
+     height: 45px;
+     padding: 0 6%;
      position: relative;
      background-color: #01022a;
      ul {
@@ -14,6 +15,12 @@ export const Nav = styled.nav`
           justify-content: space-between;
           align-items: center;
           color: white;
+     }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 60px;
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          height: 50px;
      }
 `;
 
@@ -38,7 +45,7 @@ export const Departments = styled.li`
      gap: 0.7rem;
      cursor: default;
      p {
-          font-size: 1rem;
+          font-size: 0.8rem;
      }
      .icone_menu {
           font-size: 1.5rem;

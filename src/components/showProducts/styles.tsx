@@ -1,41 +1,32 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.section`
-     background-image: url("/assets/background/SPbackground.webp");
      width: 90%;
      height: 435px;
-     margin: 0 auto;
+     margin: 3rem auto;
      padding: 1rem;
      display: flex;
      flex-direction: column;
      gap: 1rem;
      border-radius: 10px;
-     background-color: white;
-     margin-bottom: 3rem;
      position: relative;
-
+     background-image: url("/assets/background/SPbackground.webp");
      h2 {
           font-size: 2rem;
           color: white;
      }
-
      @media (max-width: 1920px) and (min-width: 1441px) {
           max-width: 1500px;
           height: 500px;
-          padding: 1rem 2rem;
-     }
-     @media (max-width: 1440px) and (min-width: 1367px) {
-          padding: 1rem 2rem;
      }
 `;
 export const ConteinerSlide = styled.div`
      width: 100%;
      height: 350px;
      position: relative;
-
      .btn_slide {
-          background-color: white;
-          padding: 0.2rem;
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 0.5rem;
           border-radius: 50%;
           font-size: 1.5rem;
           display: flex;
@@ -56,28 +47,20 @@ export const ConteinerSlide = styled.div`
           }
      }
      .next {
-          right: 2%;
+          right: -3%;
      }
      .previous {
-          left: 2%;
+          left: -3%;
      }
      @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 430px;
+          height: 420px;
      }
 `;
 
 export const Slide = styled.div`
-     width: 100%;
      height: 100%;
      display: flex;
-     gap: 3%;
+     gap: 2.5%;
      overflow-x: hidden;
      scroll-behavior: smooth;
-
-     @media (max-width: 1920px) and (min-width: 1441px) {
-          gap: 60px;
-     }
-     @media (max-width: 1440px) and (min-width: 1367px) {
-          gap: 50px;
-     }
 `;

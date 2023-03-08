@@ -1,7 +1,7 @@
 export type pokemonSmall = {
      name: string;
      url: string;
-}
+};
 
 export type pokemonInfo = {
      name: string;
@@ -10,8 +10,13 @@ export type pokemonInfo = {
      types: string[];
 };
 
-type storageType = {
+export type storageType = {
      name: string;
      image: string;
      count: number;
 };
+
+export interface user {
+     email?: string;
+     token?: string;
+}

@@ -11,18 +11,19 @@ type propsFilterAtual = {
      color: string;
 };
 
-const ProductsByCategory = () => {
+const CategoryContent = () => {
      const { asPath } = useRouter();
      const title = asPath.slice(1);
 
-     const [filterAtual, setFilterAtual] = useState<propsFilterAtual>({ type: "", color: "" });
+     const [type, setType] = useState<string>("");
+     const [color, setColor] = useState<string>("");
 
      console.log("Produtos by category render");
 
      return (
           <S.ProductsByCategory>
                <h2>{title}</h2>
-               <FilterProvider filterAtual={filterAtual} setFilterAtual={setFilterAtual}>
+               <FilterProvider type={type} color={color} setType={setType} setColor={setColor}>
                     <S.Content>
                          <FilterSelect />
                          <AllFilterPokemonsList />
@@ -32,4 +33,4 @@ const ProductsByCategory = () => {
      );
 };
 
-export default ProductsByCategory;
+export default CategoryContent;
