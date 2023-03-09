@@ -4,6 +4,10 @@ import DataCategoryProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/TelefoniaRequest";
 import { pokemonInfo } from "../types/types";
 import CategoryContent from "../components/categoryContent";
+import { Suspense, lazy } from "react";
+import Layout from "../layout/Layout";
+//const CategoryContent = lazy(() => import("../components/categoryContent"));
+//const DataCategoryProvider = lazy(() => import("../contexts/DataCategoryProvider"));
 
 type props = {
      data: pokemonInfo[];
@@ -11,6 +15,7 @@ type props = {
 
 const Telefonia = ({ data }: props) => {
      console.log("telefonia render");
+
      return (
           <>
                <Head>
@@ -18,9 +23,11 @@ const Telefonia = ({ data }: props) => {
                     <meta name="description" content="categoria de pokemons, filtragem de pokemons" />
                </Head>
                <main>
-                    <DataCategoryProvider data={data}>
-                         <CategoryContent name="telefonia" />
-                    </DataCategoryProvider>
+                    <Suspense fallback={<p>teste</p>}>
+                         <DataCategoryProvider data={data}>
+                              <CategoryContent name="telefonia" />
+                         </DataCategoryProvider>
+                    </Suspense>
                </main>
           </>
      );

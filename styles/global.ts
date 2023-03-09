@@ -7,9 +7,6 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
  }
  body{
-  background-image: url("/assets/background/Background.webp");
-  background-repeat: repeat;
-  background-size: cover;
   overflow-x: hidden;
  }
  ul{

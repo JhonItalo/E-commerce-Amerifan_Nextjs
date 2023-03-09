@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import * as S from "./styles";
 import FilterSelect from "../filterSelect";
 import AllFilterPokemonsList from "../allFilterPokemonsList";
 import FilterProvider from "../../contexts/FilterContext";
+import { DataProviderContext, DatacontextType } from "../../contexts/DataCategoryProvider";
 
 type props = {
      name: string;
@@ -11,6 +12,7 @@ type props = {
 const CategoryContent = ({ name }: props) => {
      const [type, setType] = useState<string>("");
      const [color, setColor] = useState<string>("");
+     const { data } = useContext<DatacontextType>(DataProviderContext);
 
      console.log("Produtos by category render");
 
@@ -20,7 +22,7 @@ const CategoryContent = ({ name }: props) => {
                <FilterProvider type={type} color={color} setType={setType} setColor={setColor}>
                     <S.Content>
                          <FilterSelect />
-                         <AllFilterPokemonsList />
+                         {data && <AllFilterPokemonsList />}
                     </S.Content>
                </FilterProvider>
           </S.ProductsByCategory>

@@ -22,7 +22,14 @@ export default function Home({ bestSeller, newProducts }: props) {
                     <meta name="description" content="e-commerce, best seller, new Products, promoção black friday amerifan" />
                </Head>
 
-               <main>
+               <main
+                    style={{
+                         backgroundImage: 'url("/assets/background/Background.webp")',
+                         backgroundRepeat: "repeat",
+                         backgroundSize: "cover",
+                         background: "black",
+                    }}
+               >
                     <SlideCategorys />
                     <PromotionSpan />
                     <BannerMain />

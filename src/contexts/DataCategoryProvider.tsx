@@ -2,13 +2,13 @@ import React, { createContext } from "react";
 import { pokemonInfo } from "../types/types";
 
 export type DatacontextType = {
-     data: pokemonInfo[];
+     data: pokemonInfo[] | null;
 };
 
-export const DataProviderContext = createContext<DatacontextType>({ data: [] });
+export const DataProviderContext = createContext<DatacontextType>({} as DatacontextType);
 
 interface props {
-     data: any[];
+     data: pokemonInfo[] | null;
      children: React.ReactNode;
 }
 
