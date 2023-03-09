@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { GetStaticProps } from "next";
-import ProductsByCategory from "../components/categoryContent";
+import { GetServerSideProps } from "next";
 import DataProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/TveVideoRequests";
 import { pokemonInfo } from "../types/types";
+import CategoryContent from "../components/categoryContent";
 
 type props = {
      data: pokemonInfo[];
@@ -19,7 +19,7 @@ const TveVideo = ({ data }: props) => {
                </Head>
                <main>
                     <DataProvider data={data}>
-                         <ProductsByCategory />
+                         <CategoryContent name="tv e video" />
                     </DataProvider>
                </main>
           </>
@@ -28,7 +28,7 @@ const TveVideo = ({ data }: props) => {
 
 export default TveVideo;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
      const { data, error } = await resolveListRequests();
 
      if (error) {

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { GetServerSideProps } from "next";
 import DataCategoryProvider from "../contexts/DataCategoryProvider";
-import { resolveListRequests } from "../request/TelefoniaRequest";
+import { resolveListRequests } from "../request/MoveisRequests";
 import { pokemonInfo } from "../types/types";
 import CategoryContent from "../components/categoryContent";
 
@@ -9,24 +9,24 @@ type props = {
      data: pokemonInfo[];
 };
 
-const Telefonia = ({ data }: props) => {
-     console.log("telefonia render");
+const Moveis = ({ data }: props) => {
+     console.log("moveis render");
      return (
           <>
                <Head>
-                    <title>Amerifan - telefonia</title>
+                    <title>Amerifan - moveis</title>
                     <meta name="description" content="categoria de pokemons, filtragem de pokemons" />
                </Head>
                <main>
                     <DataCategoryProvider data={data}>
-                         <CategoryContent name="telefonia" />
+                         <CategoryContent name="moveis" />
                     </DataCategoryProvider>
                </main>
           </>
      );
 };
 
-export default Telefonia;
+export default Moveis;
 
 export const getServerSideProps: GetServerSideProps = async () => {
      const { data, error } = await resolveListRequests();

@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import * as S from "./styles";
-import { useRouter } from "next/router";
-
 import FilterSelect from "../filterSelect";
 import AllFilterPokemonsList from "../allFilterPokemonsList";
 import FilterProvider from "../../contexts/FilterContext";
 
-type propsFilterAtual = {
-     type: string;
-     color: string;
+type props = {
+     name: string;
 };
 
-const CategoryContent = () => {
-     const { asPath } = useRouter();
-     const title = asPath.slice(1);
-
+const CategoryContent = ({ name }: props) => {
      const [type, setType] = useState<string>("");
      const [color, setColor] = useState<string>("");
 
@@ -22,7 +16,7 @@ const CategoryContent = () => {
 
      return (
           <S.ProductsByCategory>
-               <h2>{title}</h2>
+               <h2>{name}</h2>
                <FilterProvider type={type} color={color} setType={setType} setColor={setColor}>
                     <S.Content>
                          <FilterSelect />
