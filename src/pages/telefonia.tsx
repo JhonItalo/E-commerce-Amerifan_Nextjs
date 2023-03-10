@@ -3,10 +3,9 @@ import { GetServerSideProps } from "next";
 import DataCategoryProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/TelefoniaRequest";
 import { pokemonInfo } from "../types/types";
-import CategoryContent from "../components/categoryContent";
+//import CategoryContent from "../components/categoryContent";
 import { Suspense, lazy } from "react";
-import Layout from "../layout/Layout";
-//const CategoryContent = lazy(() => import("../components/categoryContent"));
+const CategoryContent = lazy(() => import("../components/categoryContent"));
 //const DataCategoryProvider = lazy(() => import("../contexts/DataCategoryProvider"));
 
 type props = {
