@@ -8,11 +8,12 @@ type props = {
      pokemon: any;
 };
 
-const ImageSelect = ({ pokemon = "ee" }: props) => {
+const ImageSelect = ({ pokemon }: props) => {
      console.log("image sleect renser");
      const router = useRouter();
      const [imageSelect, setImageSelect] = useState<string>("1");
 
+     //problema de rotas dinamicas que o estado permanece após a troca de pagina - solucção abaixo - params mudam para stado default-
      useEffect(() => {
           setImageSelect("1");
      }, [router.query.product]);

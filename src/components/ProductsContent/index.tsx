@@ -7,16 +7,14 @@ type props = {
 };
 
 const ProductsContent = ({ pokemon }: props) => {
-     console.log(pokemon);
-
      return (
           <>
                {pokemon && (
                     <S.Conteiner>
-                         <S.ConteinerImageInfo>
+                         <S.MainConteiner>
                               <ImageSelect pokemon={pokemon} />
                               <ProductsInfo pokemon={pokemon} />
-                         </S.ConteinerImageInfo>
+                         </S.MainConteiner>
 
                          <S.Describe>
                               <h3>Describe:</h3>
@@ -39,48 +37,6 @@ const ProductsContent = ({ pokemon }: props) => {
                                    consectetur. Praesent neque lorem, volutpat vitae lectus id, gravida ornare nisl.
                               </p>
                          </S.Describe>
-
-                         <S.TechnicalInformation>
-                              <h3>Technical information:</h3>
-
-                              <table className="demo">
-                                   <caption>Technical Info</caption>
-                                   <thead>
-                                        <tr>
-                                             <th>epsum</th>
-                                             <th>em lorem lor</th>
-                                             <th>eu lorem spspum loem</th>
-                                             <th>espp</th>
-                                        </tr>
-                                   </thead>
-                                   <tbody>
-                                        <tr>
-                                             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-                                             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-                                             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-                                             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elitS</td>
-                                        </tr>
-                                        <tr>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                        </tr>
-                                        <tr>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                        </tr>
-                                        <tr>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                             <td>Epsum</td>
-                                        </tr>
-                                   </tbody>
-                              </table>
-                         </S.TechnicalInformation>
                     </S.Conteiner>
                )}
           </>

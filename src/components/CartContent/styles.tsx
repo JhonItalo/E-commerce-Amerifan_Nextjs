@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const MyCart = styled.main`
-     width: 100%;
-     padding-top: 1rem;
-     padding-bottom: 2rem;
-     background-color: #e2dada;
-`;
 export const Content = styled.div`
      width: 80%;
      height: 90vh;

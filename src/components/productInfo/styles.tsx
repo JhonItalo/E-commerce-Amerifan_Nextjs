@@ -39,11 +39,11 @@ export const ColorSelect = styled.div`
           display: flex;
           gap: 1rem;
           button {
-               padding: 1rem;
+               padding: 0.8rem;
                border: 1px solid grey;
-               border-radius: 50%;
                position: relative;
                cursor: pointer;
+               border-radius: 5px;
           }
      }
 `;
@@ -55,7 +55,7 @@ export const SizeSelect = styled.div`
           gap: 1rem;
           button {
                text-transform: uppercase;
-               padding: 1rem;
+               padding: 0.9rem;
                border: 1px solid grey;
                background-color: transparent;
                cursor: pointer;
@@ -119,7 +119,6 @@ export const Frete = styled.div`
                border: none;
                background-color: #134354;
                color: white;
-               cursor: pointer;
           }
      }
 `;

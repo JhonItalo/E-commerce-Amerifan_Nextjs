@@ -8,17 +8,23 @@ import Footer from "../layout/footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Nav from "../layout/nav";
+import RedirectLogin from "../contexts/RedirectLogin";
+import { AuthUserProvider } from "../contexts/AuthUser";
 
 export default function App({ Component, pageProps }: AppProps) {
      return (
           <>
                <ThemeProvider theme={themes}>
-                    <CarrinhoContext>
-                         <Header />
-                         <Nav />
-                         <Component {...pageProps} />
-                    </CarrinhoContext>
-                    <Footer />
+                    <AuthUserProvider>
+                         <CarrinhoContext>
+                              <RedirectLogin>
+                                   <Header />
+                                   <Nav />
+                                   <Component {...pageProps} />
+                              </RedirectLogin>
+                         </CarrinhoContext>
+                         <Footer />
+                    </AuthUserProvider>
                </ThemeProvider>
                <ToastContainer />
                <GlobalStyles />

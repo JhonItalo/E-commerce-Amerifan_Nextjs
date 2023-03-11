@@ -1,54 +1,52 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
+     background: white;
      width: 100%;
      padding: 1rem 1rem 1rem 2rem;
-     background-color: white;
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          padding: 4rem;
+     }
 `;
 
-export const ConteinerImageInfo = styled.div`
+export const MainConteiner = styled.div`
      width: 100%;
-     //height: 500px;
      padding: 1rem;
-     border-radius: 5px;
      display: flex;
      gap: 2rem;
-     // background-color: white;
+     background-color: white;
 `;
 export const Describe = styled.section`
-     line-height: 1.6;
+     margin: 2rem 0 4rem;
      h3 {
           margin-bottom: 1rem;
      }
+     background-color: white;
 `;
 
 export const TechnicalInformation = styled.section`
      margin-top: 2rem;
      margin-bottom: 4rem;
      h3 {
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
      }
-     table {
+     .customTable {
           width: 100%;
-          border: 1px solid black;
-          caption {
-               background-color: beige;
-          }
-          thead {
-               background-color: grey;
-               tr {
-                    th {
-                         border: 1px solid black;
-                    }
-               }
-          }
-          tbody {
-               tr {
-                    border-left: 1px solid black;
-                    td {
-                         border: 1px solid black;
-                    }
-               }
-          }
+          background-color: #ffffff;
+          border-collapse: collapse;
+          border-width: 2px;
+          border-color: #7ea8f8;
+          border-style: solid;
+          color: #000000;
+     }
+     table.customTable td,
+     table.customTable th {
+          border-width: 2px;
+          border-color: #7ea8f8;
+          border-style: solid;
+          padding: 5px;
+     }
+     table.customTable thead {
+          background-color: #7ea8f8;
      }
 `;

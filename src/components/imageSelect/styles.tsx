@@ -11,7 +11,7 @@ export const Conteiner = styled.div`
      height: 500px;
      display: flex;
      align-items: center;
-     gap: 5rem;
+     gap: 4rem;
 `;
 export const ButtonsSelect = styled.div`
      display: flex;
@@ -26,7 +26,6 @@ export const Button = styled.div<activeButton>`
      height: 70px;
      border: 1px solid ${({ active }) => (active ? "blue" : "black")};
      border-radius: 5px;
-     position: relative;
 `;
 export const ConteinerImage = styled.div<activeImage>`
      height: 100%;
