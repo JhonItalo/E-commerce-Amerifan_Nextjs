@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import * as S from "./styles";
 import { CartContext, contextCartType } from "../../contexts/CartContext";
-import ItemCart from "../itemCart";
+import ItemCart from "../../components/itemCart";
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
 import { storageType } from "../../types/types";

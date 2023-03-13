@@ -265,6 +265,7 @@ const RegisterContent = () => {
                                                   cadastro
                                              </p>
                                              <S.Input
+                                                   autoComplete="new-email"
                                                   width="70%"
                                                   active={activeEmail}
                                                   type="text"
@@ -281,6 +282,7 @@ const RegisterContent = () => {
 
                                              <div>
                                                   <S.InputSenha
+                                                       autoComplete="new-password"
                                                        active={activeSenha}
                                                        type="password"
                                                        ref={senhaRef}

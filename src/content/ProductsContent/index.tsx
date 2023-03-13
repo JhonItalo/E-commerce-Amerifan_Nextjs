@@ -1,5 +1,5 @@
-import ImageSelect from "../imageSelect";
-import ProductsInfo from "../productInfo";
+import ImageSelect from "../../components/imageSelect";
+import ProductsInfo from "../../components/productInfo";
 import * as S from "./styles";
 
 type props = {

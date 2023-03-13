@@ -1,6 +1,6 @@
 import React from "react";
 import PrivateRoute from "../components/privateRoute";
-import UserContent from "../components/userContent";
+import UserContent from "../content/userContent";
 
 const User = () => {
      return (

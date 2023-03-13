@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
-import ProductsContent from "../../components/ProductsContent";
+import ProductsContent from "../../content/ProductsContent";
 import Head from "next/head";
 
 import { requestProducts } from "../../request/ProductsRequest";

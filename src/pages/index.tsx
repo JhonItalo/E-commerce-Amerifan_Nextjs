@@ -1,19 +1,16 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { resolveListRequests } from "../request/HomeRequest";
-import SlideCategorys from "../components/slideCategory";
-import PromotionSpan from "../components/promotionSpan";
-import BannerMain from "../components/bannerMain";
-import RegistrationOffers from "../components/registrationOffers";
-import ShowProducts from "../components/showProducts";
 import { pokemonInfo } from "../types/types";
+import HomeContent from "../content/homeContent";
+import DataHomeProvider from "../contexts/DataHomeProvider";
 
 type props = {
      bestSeller: pokemonInfo[];
      newProducts: pokemonInfo[];
 };
 
-export default function Home({ bestSeller, newProducts }: props) {
+export default function Home(data: props) {
      console.log("home render");
      return (
           <>
@@ -23,21 +20,17 @@ export default function Home({ bestSeller, newProducts }: props) {
                </Head>
 
                <main
+                    className="main"
                     style={{
-                         backgroundImage: 'url("/assets/background/Background.webp")',
-                         backgroundRepeat: "repeat",
-                         backgroundSize: "cover",
                          background: "black",
+                         backgroundImage: `url("/assets/background/Background.webp")`,
+                         backgroundRepeat: "repeat",
+                         backgroundSize: "100% 40%",
                     }}
                >
-                    <SlideCategorys />
-                    <PromotionSpan />
-                    <BannerMain />
-                    <div className="sections">
-                         <ShowProducts title="Best Seller" data={bestSeller} />
-                         <ShowProducts title="New products" data={newProducts} />
-                    </div>
-                    <RegistrationOffers />
+                    <DataHomeProvider data={{ ...data }}>
+                         <HomeContent />
+                    </DataHomeProvider>
                </main>
           </>
      );

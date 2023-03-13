@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import * as S from "./styles";
-import FilterSelect from "../filterSelect";
-import AllFilterPokemonsList from "../allFilterPokemonsList";
+import FilterSelect from "../../components/filterSelect";
+import AllFilterPokemonsList from "../../components/allFilterPokemonsList";
 import FilterProvider from "../../contexts/FilterContext";
 import { DataProviderContext, DatacontextType } from "../../contexts/DataCategoryProvider";
 

@@ -5,7 +5,7 @@ import { pokemonSmall } from "../../types/types";
 import { useRouter } from "next/navigation";
 import { FiSearch } from "react-icons/fi";
 import Link from "next/link";
-import Loading from "../loading";
+import Loading from "../../components/loading";
 
 type props = {
      data: pokemonSmall[];

@@ -68,8 +68,9 @@ const LoginContent = () => {
      };
 
      const Login = async (e: React.SyntheticEvent) => {
+          console.log("login fuction");
           e.preventDefault();
-          if (validationEmail(email) && senha.length > 8) {
+          if (validationEmail(email) && senha.length >= 8) {
                const result = await authentication(email, senha);
                if (result) {
                     return;
