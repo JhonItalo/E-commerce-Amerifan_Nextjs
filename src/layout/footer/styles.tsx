@@ -6,7 +6,8 @@ export const Footer = styled.div`
      padding: 3rem;
      display: flex;
      justify-content: space-around;
-     background-color: #e8e8e8;
+     background-color: ${({ theme }) => theme.colors.grey100};
+
      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
      @media (max-width: 1920px) and (min-width: 1441px) {
           height: 550px;
@@ -19,7 +20,7 @@ export const Item = styled.div`
      flex-direction: column;
      gap: 1rem;
      .title {
-          color: #c11a26;
+          color: ${({ theme }) => theme.colors.textRed};
           font-weight: bold;
           font-size: 1rem;
      }
@@ -37,7 +38,7 @@ export const ItemComposto = styled.div`
           gap: 1rem;
           margin-bottom: 1rem;
           .title {
-               color: #c11a26;
+               color: ${({ theme }) => theme.colors.textRed};
                font-weight: bold;
                font-size: 1rem;
           }
@@ -60,7 +61,7 @@ export const ItemComposto = styled.div`
                     position: relative;
                     svg {
                          font-size: 2rem;
-                         color: #007ac2;
+                         color: ${({ theme }) => theme.colors.azulMain};
                     }
                }
           }

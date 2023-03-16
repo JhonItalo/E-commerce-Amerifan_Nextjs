@@ -7,7 +7,7 @@ export const Conteiner = styled.div`
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color: #8b8b8b;
+     background-color: ${({ theme }) => theme.colors.grey500};
 
      p {
           font-weight: bold;
@@ -31,7 +31,7 @@ export const Conteiner = styled.div`
                align-items: center;
                justify-content: center;
                color: #575757;
-               background-color: #e8e8e8;
+               background-color: ${({ theme }) => theme.colors.grey100};
           }
           input {
                width: 79.5%;

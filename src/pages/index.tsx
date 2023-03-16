@@ -20,12 +20,11 @@ export default function Home(data: props) {
                </Head>
 
                <main
-                    className="main"
                     style={{
                          background: "black",
                          backgroundImage: `url("/assets/background/Background.webp")`,
                          backgroundRepeat: "repeat",
-                         backgroundSize: "100% 40%",
+                         backgroundSize: "100% auto",
                     }}
                >
                     <DataHomeProvider data={{ ...data }}>

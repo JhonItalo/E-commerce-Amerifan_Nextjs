@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import * as S from "./styles";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Loading from "../loading";
+
 import { pokemonInfo } from "../../types/types";
 
 import Card from "../card";

@@ -49,7 +49,7 @@ const Nav = () => {
 
                               <S.Li active={pathname === "/eletroportateis"}>
                                    <Link href="/">
-                                        <p>EletroPortáteis</p>
+                                        <p>Eletroportáteis</p>
                                    </Link>
                               </S.Li>
                               <S.Li active={pathname === "/informatica"}>

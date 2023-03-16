@@ -41,7 +41,7 @@ const AllFilterPokemonsList = () => {
      };
 
      const order: pokemonInfo[] | undefined = selectOrder(select);
-     
+
      const filterType: pokemonInfo[] =
           order && type != ""
                ? order.filter((item: pokemonInfo) => {
