@@ -12,4 +12,11 @@ export const Conteiner = styled.div`
                }
           }
      }
+     @media (max-width: 1280px) and (min-width: 1110px) {
+          a {
+               img {
+                    width: 180px;
+               }
+          }
+     }
 `;

@@ -15,7 +15,7 @@ const Header = () => {
                {pathname != "/login" && pathname != "/register" && (
                     <S.Header>
                          <S.InitialPromotionSpan>
-                              <p className="developer">Developer by John Ítalo Lima Lima</p>
+                              <p className="developer">Developer by John Ítalo Lucas Lima</p>
                               <div>
                                    <a href="https://www.linkedin.com/in/johnitalodev/" target="_blank" rel="noreferrer">
                                         <AiFillLinkedin />

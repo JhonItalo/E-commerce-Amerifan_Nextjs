@@ -12,14 +12,12 @@ export const ConteinerInfo = styled.div`
      display: flex;
      gap: 1rem;
      align-items: center;
-
      div {
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
           gap: 1rem;
-
           .title {
                font-size: 1.5rem;
                letter-spacing: 4px;
@@ -49,7 +47,6 @@ export const CountPrice = styled.div`
      width: 20%;
      display: flex;
      justify-content: center;
-
      p {
           padding: 5px 8px;
           display: flex;

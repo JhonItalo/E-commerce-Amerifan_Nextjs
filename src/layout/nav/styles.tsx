@@ -1,15 +1,11 @@
 import styled from "styled-components";
-interface propsLi {
-     active: boolean;
-}
 
 export const Nav = styled.nav`
      width: 100%;
      height: 45px;
      padding: 0 6%;
      position: relative;
-     background-color: ${({ theme }) => theme.colors.azul900};
-     font-family: "Hind Madurai", sans-serif;
+     background-color: #01022a;
      ul {
           height: 100%;
           display: flex;
@@ -25,15 +21,16 @@ export const Nav = styled.nav`
      }
 `;
 
-export const Li = styled.li<propsLi>`
+export const Li = styled.li`
      height: 100%;
      a {
           height: 100%;
-          font-size: 1rem;
+          font-size: 0.8rem;
           display: flex;
           align-items: center;
-          p {
-               border-bottom: ${({ active }) => (active ? "2px solid #cc0000" : "")};
+          text-transform: uppercase;
+          .active {
+               border-bottom: 2px solid #cc0000;
           }
      }
 `;
@@ -41,17 +38,17 @@ export const Departments = styled.li`
      height: 100%;
      display: flex;
      align-items: center;
+     text-transform: uppercase;
      gap: 0.7rem;
      cursor: default;
-     font-weight: bold;
      p {
-          font-size: 1rem;
+          font-size: 0.8rem;
      }
      .icone_menu {
           font-size: 1.5rem;
      }
      .icone_arrow {
-          font-size: 0.6rem;
+          font-size: 0.8rem;
      }
      &:hover .modalAllDepartaments {
           display: flex;

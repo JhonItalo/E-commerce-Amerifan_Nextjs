@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
+export const MyCart = styled.main`
+     width: 100%;
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     background-color: #e2dada;
+`;
 export const Content = styled.div`
      width: 80%;
      height: 90vh;
      margin: 0 auto 4rem;
      display: flex;
      overflow: hidden;
+     border-radius: 8px;
      background-color: white;
 `;
 export const ConteinerShopCart = styled.div`
@@ -14,7 +21,6 @@ export const ConteinerShopCart = styled.div`
      flex-direction: column;
      padding: 2rem 3rem 0;
      position: relative;
-
      .topic {
           display: flex;
           justify-content: space-between;
@@ -29,7 +35,6 @@ export const ConteinerShopCart = styled.div`
           font-size: 0.7rem;
           display: flex;
           color: grey;
-
           .pd {
                width: 60%;
                text-align: start;
@@ -44,7 +49,6 @@ export const ConteinerShopCart = styled.div`
                text-align: right;
           }
      }
-
      .backshopping {
           position: absolute;
           bottom: 7%;
@@ -63,26 +67,21 @@ export const ListCart = styled.ul`
      flex-direction: column;
      gap: 1.5rem;
      overflow-y: scroll;
-
      ::-webkit-scrollbar {
           width: 1px;
      }
-
      ::-webkit-scrollbar-track {
           background-color: white;
      }
-
      ::-webkit-scrollbar-thumb {
           background-color: grey;
      }
-
      .empty {
           width: 100%;
           height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-
           p {
                font-size: 2rem;
           }
@@ -96,7 +95,7 @@ export const Sumary = styled.div`
      width: 30%;
      padding: 2rem 2rem 0;
      background-color: #e0de6ad6;
-
+     background-color: #71889c;
      .topic {
           display: flex;
           justify-content: space-between;
@@ -180,6 +179,7 @@ export const TotalCoast = styled.div`
           text-transform: uppercase;
           color: white;
           background-color: #7255b2;
+          background-color: #0b64b3;
           border: 1px solid grey;
           &:hover {
                filter: brightness(0.9);

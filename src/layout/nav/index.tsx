@@ -20,46 +20,46 @@ const Nav = () => {
                                    <ModalAllDepartaments />
                               </S.Departments>
 
-                              <S.Li active={pathname === "/telefonia"}>
+                              <S.Li>
                                    <Link href="/telefonia">
-                                        <p>Telefonia</p>
+                                        <p className={pathname === "/telefonia" ? "active" : ""}>Telefonia</p>
                                    </Link>
                               </S.Li>
-                              <S.Li active={pathname === "/smartphones"}>
+                              <S.Li>
                                    <Link href="/smartphones">
-                                        <p>Smartphones</p>
+                                        <p className={pathname === "/smartphones" ? "active" : ""}>Smartphones</p>
                                    </Link>
                               </S.Li>
-                              <S.Li active={pathname === "/eletrodomesticos"}>
+                              <S.Li>
                                    <Link href="/eletrodomesticos">
-                                        <p>Eletrodomésticos</p>
+                                        <p className={pathname === "/eletrodomesticos" ? "active" : ""}>Eletrodomésticos</p>
                                    </Link>
                               </S.Li>
-                              <S.Li active={pathname === "/moveis"}>
+                              <S.Li>
                                    <Link href="/moveis">
-                                        <p>Movéis</p>
+                                        <p className={pathname === "/moveis" ? "active" : ""}>Movéis</p>
                                    </Link>
                               </S.Li>
 
-                              <S.Li active={pathname === "/tvevideo"}>
+                              <S.Li>
                                    <Link href="/tvevideo">
-                                        <p>Tv e vídeo</p>
+                                        <p className={pathname === "/tvecideo" ? "active" : ""}>Tv e vídeo</p>
                                    </Link>
                               </S.Li>
 
-                              <S.Li active={pathname === "/eletroportateis"}>
+                              <S.Li>
                                    <Link href="/">
-                                        <p>Eletroportáteis</p>
+                                        <p className={pathname === "/eletroportateis" ? "active" : ""}>Eletroportáteis</p>
                                    </Link>
                               </S.Li>
-                              <S.Li active={pathname === "/informatica"}>
+                              <S.Li>
                                    <Link href="/">
-                                        <p>Informática</p>
+                                        <p className={pathname === "/informatica" ? "active" : ""}>Informática</p>
                                    </Link>
                               </S.Li>
-                              <S.Li active={pathname === "/servicos"}>
+                              <S.Li>
                                    <Link href="/">
-                                        <p>Serviços</p>
+                                        <p className={pathname === "/servicos" ? "active" : ""}>Serviços</p>
                                    </Link>
                               </S.Li>
                          </ul>

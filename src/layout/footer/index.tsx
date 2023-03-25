@@ -18,11 +18,11 @@ const Footer = () => {
                               <div>
                                    <p className="title">Baixe o nosso App</p>
                                    <Link href="telefonia">
-                                        <Image src="/google.webp" alt="Google play" width={100} height={45} />
+                                        <Image src="/assets/play/google.webp" alt="Google play" width={100} height={45} />
                                         <AccessibleName name="google play" />
                                    </Link>
                                    <Link href="telefonia">
-                                        <Image src="/iphone.webp" alt="Apple store" width={75} height={30} />
+                                        <Image src="/assets/play/iphone.webp" alt="Apple store" width={85} height={30} />
                                         <AccessibleName name="apple store" />
                                    </Link>
                               </div>

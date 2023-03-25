@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import * as S from "./styles";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 

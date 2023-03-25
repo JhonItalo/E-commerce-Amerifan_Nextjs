@@ -29,7 +29,7 @@ export const Content = styled.div`
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: ${({ theme }) => theme.colors.azulEscuro};
+     background-color: #000336;
      @media (max-width: 1920px) and (min-width: 1441px) {
           height: 150px;
      }

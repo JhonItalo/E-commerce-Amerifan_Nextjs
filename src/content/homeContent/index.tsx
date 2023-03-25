@@ -6,6 +6,7 @@ import ShowProducts from "../../components/showProducts";
 import RegistrationOffers from "../../components/registrationOffers";
 import { DataHomeContext, DataHomeType } from "../../contexts/DataHomeProvider";
 import Card from "../../components/card";
+import BannerSecondary from "../../components/bannerSecondary";
 
 const HomeContent = () => {
      const { bestSeller, newProducts } = useContext<DataHomeType>(DataHomeContext);
@@ -14,10 +15,9 @@ const HomeContent = () => {
                <SlideCategorys />
                <PromotionSpan />
                <BannerMain />
-               <div className="sections">
-                    <ShowProducts title="Best Seller" data={bestSeller} />
-                    <ShowProducts title="New products" data={newProducts} />
-               </div>
+               <ShowProducts title="Best Seller" data={bestSeller} />
+               <BannerSecondary />
+               <ShowProducts title="New products" data={newProducts} />
 
                <RegistrationOffers />
           </>

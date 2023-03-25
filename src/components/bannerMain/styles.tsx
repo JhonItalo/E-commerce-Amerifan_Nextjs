@@ -13,7 +13,7 @@ export const ConteinerSlide = styled.div`
      .btn_slide {
           width: 2rem;
           height: 2rem;
-          font-size: 3rem;
+          font-size: 2.5rem;
           color: white;
           position: absolute;
           top: calc(50% - 2.5rem);

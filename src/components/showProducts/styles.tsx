@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.section`
-     width: 90%;
+     width: 95%;
      height: 435px;
      margin: 3rem auto;
-     padding: 1rem;
+     padding: 1rem 2rem;
      display: flex;
      flex-direction: column;
      gap: 1rem;
-     border-radius: 10px;
+     border-radius: 25px;
      position: relative;
      background-image: url("/assets/background/SPbackground.webp");
      h2 {
@@ -25,25 +25,24 @@ export const ConteinerSlide = styled.div`
      height: 350px;
      position: relative;
      .btn_slide {
-          background-color: rgba(255, 255, 255, 0.8);
-          padding: 0.5rem;
-          border-radius: 50%;
-          font-size: 1.5rem;
+          font-size: 3rem;
           display: flex;
           align-items: center;
           justify-content: center;
           position: absolute;
           top: 50%;
           transform: translate(0, -50%);
-          border: 1px solid grey;
-          color: #0f31c9;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          background-color: transparent;
           P {
                font-size: 0.5rem;
                position: absolute;
                opacity: 0;
           }
           &:hover {
-               border: 1px solid red;
+               background-color: #3b35357d;
           }
      }
      .next {

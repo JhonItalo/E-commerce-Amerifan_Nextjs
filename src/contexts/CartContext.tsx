@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import useFirstRender from "../hooks/useFirstRender";
 import { storageType } from "../types/types";
+import { toast } from "react-toastify";
 
 export type contextCartType = {
      storage: storageType[];
@@ -60,10 +61,12 @@ const CarrinhoContext = ({ children }: props) => {
           for (let index = 0; index < copyStorage.length; index++) {
                if (copyStorage[index].name === name) {
                     AddQuantidadeItem(index);
+                    toast.success("Adicionado ao carrinho");
                     return;
                }
           }
           AddNewItem(name, image);
+          toast.success("Adicionado ao carrinho");
           return;
      };
      const removeToCart = (name: string) => {
