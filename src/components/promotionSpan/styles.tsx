@@ -54,9 +54,7 @@ export const Conteiner = styled.div`
                }
           }
      }
-     @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 55px;
-     }
+
      @media (max-width: 1440px) and (min-width: 1367px) {
           height: 40px;
      }

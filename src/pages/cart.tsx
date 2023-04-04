@@ -1,5 +1,5 @@
 import React from "react";
-import CartContent from "../content/cartContent";
+import CartContent from "../content/cart";
 import PrivateRoute from "../components/privateRoute";
 
 const MyCart = () => {

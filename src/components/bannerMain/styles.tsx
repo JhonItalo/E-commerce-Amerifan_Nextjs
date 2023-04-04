@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 export const Banner = styled.div`
      width: 94%;
-     margin: 2rem auto 0;
+     margin: 1rem auto 0;
      display: flex;
      flex-direction: column;
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: 1200px;
+     }
 `;
 export const ConteinerSlide = styled.div`
      width: 100%;
+     height: 450px;
      position: relative;
      padding-bottom: 2.5rem;
      .btn_slide {
           width: 2rem;
           height: 2rem;
-          font-size: 2.5rem;
+          font-size: 3rem;
           color: white;
           position: absolute;
           top: calc(50% - 2.5rem);
@@ -28,11 +32,17 @@ export const ConteinerSlide = styled.div`
      .next {
           right: 7%;
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          height: 450px;
+     }
+     @media (max-width: 1440px) and (min-width: 1367px) {
+          height: 480px;
+     }
 `;
 
 export const Slide = styled.div`
      width: 100%;
-     height: 400px;
+     height: 100%;
      display: flex;
      overflow-y: hidden;
      overflow-x: auto;
@@ -51,12 +61,6 @@ export const Slide = styled.div`
      }
      &::-webkit-scrollbar {
           display: none;
-     }
-     @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 450px;
-     }
-     @media (max-width: 1440px) and (min-width: 1367px) {
-          height: 420px;
      }
 `;
 export const Radios = styled.div`

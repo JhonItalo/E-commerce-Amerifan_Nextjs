@@ -4,8 +4,10 @@ export const Conteiner = styled.div`
      width: 100%;
      height: 120px;
      position: relative;
+     background-Image: url('/assets/background/Background.webp');
+ 
      @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 150px;
+          height: 110px;
      }
      @media (max-width: 1440px) and (min-width: 1367px) {
           height: 130px;
@@ -32,6 +34,9 @@ export const ConteinerSlide = styled.div`
      .previous {
           left: -5%;
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: calc(1200px*0.90);
+     }
 `;
 export const Slide = styled.div`
      width: 100%;
@@ -53,12 +58,12 @@ export const Slide = styled.div`
                position: relative;
                @media (max-width: 1920px) and (min-width: 1441px) {
                     img {
-                         width: 130px;
-                         height: 130px;
+                         width: 90px;
+                         height: 90px;
                     }
                     .ball {
-                         width: 110px;
-                         height: 110px;
+                         width: 90px;
+                         height: 90px;
                     }
                }
           }

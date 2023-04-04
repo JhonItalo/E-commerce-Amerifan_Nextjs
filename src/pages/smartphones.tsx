@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import DataProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/SmarthphonesRequest";
 import { pokemonInfo } from "../types/types";
-import CategoryContent from "../content/categoryContent";
+import CategoryContent from "../content/category";
 
 type props = {
      data: pokemonInfo[];

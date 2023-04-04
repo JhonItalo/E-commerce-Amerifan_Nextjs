@@ -12,11 +12,9 @@ const AllFilterPokemonsList = () => {
      const { type, color } = useContext<FiltercontextType>(FilterProviderContext);
      const [select, setSelect] = useState<string>("default");
 
-     const selectOrder = (select: string) => {
+     const selectOrder = (select: string): pokemonInfo[] | undefined => {
           if (data) {
-               if (select === "default") {
-                    return data;
-               } else if (select === "name") {
+               if (select === "name") {
                     const nameOrder = data.slice().sort((a, b) => {
                          if (a.name < b.name) {
                               return -1;
@@ -35,11 +33,9 @@ const AllFilterPokemonsList = () => {
                     });
                     return typeOrder;
                }
-          } else {
-               return undefined;
           }
+               return data;
      };
-
      const order: pokemonInfo[] | undefined = selectOrder(select);
 
      const filterType: pokemonInfo[] =
@@ -101,7 +97,7 @@ const AllFilterPokemonsList = () => {
                          </>
                     )}
 
-                    {(type != "" || color != "") && (
+                    {order && (type != "" || color != "") && (
                          <>
                               <div className="titleOrder">
                                    <p style={{ color: "black" }}>{filtrados.length} resultados encontrados</p>

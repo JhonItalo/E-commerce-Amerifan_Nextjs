@@ -19,14 +19,6 @@ const GlobalStyles = createGlobalStyle`
    &:hover{color:inherit;}
    &:active{color:inherit;}
  }
-
-
- @media (max-width: 1920px) and (min-width: 1441px) {
-          html{
-            font-size: 20px;
-          }
-     }
-   
 `;
 
 export default GlobalStyles;

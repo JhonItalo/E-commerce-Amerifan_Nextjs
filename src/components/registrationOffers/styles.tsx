@@ -53,4 +53,7 @@ export const Conteiner = styled.div`
           border: none;
           cursor: pointer;
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: 1200px;
+     }
 `;

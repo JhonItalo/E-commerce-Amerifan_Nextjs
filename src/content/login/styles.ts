@@ -53,6 +53,9 @@ export const Content = styled.div<contentprops>`
                text-decoration: underline;
           }
      }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          width: 450px;
+     }
 `;
 type propsForm = {
      activeEmail: boolean | null;
@@ -151,4 +154,7 @@ export const Modal = styled.div`
      position: absolute;
      top: 80%;
      left: 1%;
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          top: 40%;
+     }
 `;

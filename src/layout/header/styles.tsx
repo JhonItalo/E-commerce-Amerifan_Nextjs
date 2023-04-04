@@ -30,8 +30,9 @@ export const Content = styled.div`
      justify-content: center;
      align-items: center;
      background-color: #000336;
+  
      @media (max-width: 1920px) and (min-width: 1441px) {
-          height: 150px;
+          height: 124px;
      }
      @media (max-width: 1440px) and (min-width: 1367px) {
           height: 135px;
@@ -45,4 +46,8 @@ export const MainContent = styled.div`
      display: flex;
      justify-content: space-between;
      align-items: center;
+     
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: 1200px;
+     }
 `;

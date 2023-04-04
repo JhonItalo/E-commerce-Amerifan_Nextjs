@@ -8,7 +8,7 @@ export const Conteiner = styled.div`
      @media (max-width: 1920px) and (min-width: 1441px) {
           a {
                img {
-                    width: 280px;
+                    width: 200px;
                }
           }
      }

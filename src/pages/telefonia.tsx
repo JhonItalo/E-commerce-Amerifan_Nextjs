@@ -4,7 +4,7 @@ import DataCategoryProvider from "../contexts/DataCategoryProvider";
 import { resolveListRequests } from "../request/TelefoniaRequest";
 import { pokemonInfo } from "../types/types";
 import { Suspense, lazy } from "react";
-import CategoryContent from "../content/categoryContent";
+import CategoryContent from "../content/category";
 
 type props = {
      data: pokemonInfo[];

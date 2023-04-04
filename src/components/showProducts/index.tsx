@@ -12,17 +12,17 @@ type props = {
 };
 
 const ShowProducts = ({ title, data }: props) => {
-     console.log("show products", title);
+
      const Carrosel = useRef<HTMLDivElement | null>(null);
 
      const handleScrollright = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft + 500;
+               Carrosel.current.scrollLeft += (Carrosel.current.offsetWidth*0.5)
           }
      };
      const handleScrollleft = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft = Carrosel.current.scrollLeft - 500;
+               Carrosel.current.scrollLeft -= (Carrosel.current.offsetWidth*0.5);
           }
      };
 
@@ -35,7 +35,7 @@ const ShowProducts = ({ title, data }: props) => {
                               <>
                                    <S.Slide ref={Carrosel}>
                                         {data.map((item: pokemonInfo) => (
-                                             <Card key={item.id} pokemon={item} width="18%" />
+                                             <Card key={item.id} pokemon={item} width="22%" />
                                         ))}
                                    </S.Slide>
                                    <button className="next btn_slide" onClick={handleScrollright}>
@@ -44,7 +44,6 @@ const ShowProducts = ({ title, data }: props) => {
                                    </button>
                                    <button className="previous btn_slide" onClick={handleScrollleft}>
                                         <p>scrol to left</p>
-
                                         <IoIosArrowBack />
                                    </button>
                               </>

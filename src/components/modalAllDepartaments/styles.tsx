@@ -12,7 +12,9 @@ export const Conteiner = styled.div`
      position: absolute;
      top: 102%;
      background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
      z-index: 1;
+    
      .items {
           all: initial;
           padding: 1rem;
@@ -25,5 +27,9 @@ export const Conteiner = styled.div`
           p {
                font-weight: bold;
           }
+     }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+          max-width: 1200px;
+          height: 500px;
      }
 `;

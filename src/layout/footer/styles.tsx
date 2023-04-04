@@ -4,13 +4,18 @@ export const Footer = styled.div`
      width: 100%;
      height: 400px;
      padding: 3rem;
-     display: flex;
-     justify-content: space-around;
+  
      background-color: #e8e8e8;
      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
      @media (max-width: 1920px) and (min-width: 1441px) {
           height: 550px;
      }
+    ul{
+     margin: 0 auto;
+     max-width: 1200px;
+     display: flex;
+     justify-content: space-between;
+    }
 `;
 export const Item = styled.div`
      width: 200px;
@@ -18,6 +23,7 @@ export const Item = styled.div`
      display: flex;
      flex-direction: column;
      gap: 1rem;
+    
      .title {
           color: #c11a26;
           font-weight: bold;

@@ -1,6 +1,6 @@
 import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
-import ResultsContent from "../../content/resultsContent";
+import ResultsContent from "../../content/results";
 import { useRouter } from "next/router";
 import useResultsFetch from "../../hooks/useResultsFetch";
 

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import { resolveListRequests } from "../request/HomeRequest";
 import { pokemonInfo } from "../types/types";
-import HomeContent from "../content/homeContent";
+import HomeContent from "../content/home";
 import DataHomeProvider from "../contexts/DataHomeProvider";
 
 type props = {
@@ -11,7 +11,6 @@ type props = {
 };
 
 export default function Home(data: props) {
-     console.log("home render");
      return (
           <>
                <Head>
@@ -21,10 +20,7 @@ export default function Home(data: props) {
 
                <main
                     style={{
-                         background: "black",
-                         backgroundImage: `url("/assets/background/Background.webp")`,
-                         backgroundRepeat: "repeat",
-                         backgroundSize: "100% auto",
+                         background: "#F1F1F1"
                     }}
                >
                     <DataHomeProvider data={{ ...data }}>

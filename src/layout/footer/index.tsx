@@ -14,6 +14,7 @@ const Footer = () => {
           <>
                {pathname != "/login" && pathname != "/register" && (
                     <S.Footer>
+                         <ul>
                          <S.ItemComposto>
                               <div>
                                    <p className="title">Baixe o nosso App</p>
@@ -116,6 +117,7 @@ const Footer = () => {
                          <S.Item>
                               <p className="title">Cartão Amerifan</p>
                          </S.Item>
+                         </ul>
                     </S.Footer>
                )}
           </>

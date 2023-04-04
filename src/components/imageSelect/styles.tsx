@@ -12,6 +12,14 @@ export const Conteiner = styled.div`
      display: flex;
      align-items: center;
      gap: 4rem;
+ 
+     @media (max-width: 1920px) and (min-width: 1441px) {
+       
+          overflow: hidden;
+          gap: 0rem;
+          justify-content: space-between;
+     }
+  
 `;
 export const ButtonsSelect = styled.div`
      display: flex;

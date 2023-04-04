@@ -9,7 +9,7 @@ export const Content = styled.div`
      color: rgb(102, 102, 102);
      background-color: white;
      border-radius: 8px;
-
+    
      .title {
           font-size: 1.5rem;
           font-weight: bold;
@@ -30,6 +30,10 @@ export const Content = styled.div`
                font-size: 1.5rem;
                color: #0060b1;
           }
+     }
+     @media (max-width: 1920px) and (min-width: 1441px) {
+         
+          max-width: 1200px;
      }
 `;
 export const Item = styled.label`

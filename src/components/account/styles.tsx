@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Account = styled.div`
      position: relative;
+     
      .user {
           display: flex;
           align-items: center;
@@ -58,6 +59,7 @@ export const Account = styled.div`
                position: relative;
                border-radius: 5px;
                background-color: white;
+               box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
                z-index: 2;
                button {
                     min-width: 60%;
