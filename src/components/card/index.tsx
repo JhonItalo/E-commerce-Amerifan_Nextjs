@@ -19,7 +19,7 @@ const Card = ({ pokemon, width }: props) => {
                {pokemon && (
                     <>
                          <Link href={`/products/${pokemon.name}`}>
-                              <Image src={pokemon.image} alt={pokemon.name} width={140} height={158} priority />
+                              <Image src={pokemon.image} alt={pokemon.name} width={130} height={158} priority />
                               <AccessibleName name={pokemon.name} />
                          </Link>
                          <div className="info">
