@@ -10,7 +10,7 @@ export const Footer = styled.div`
      @media (max-width: 1920px) and (min-width: 1441px) {
           height: 550px;
      }
-    ul{
+    .list{
      margin: 0 auto;
      max-width: 1200px;
      display: flex;
