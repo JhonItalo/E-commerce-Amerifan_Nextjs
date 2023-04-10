@@ -43,7 +43,7 @@ export const ConteinerSlide = styled.div`
           }
      }
      .next {
-          right: -4%;
+          right: -3%;
      }
      .previous {
           left: -4%;
