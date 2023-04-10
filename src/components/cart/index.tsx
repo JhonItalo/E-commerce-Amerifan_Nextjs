@@ -5,7 +5,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { BsCart3 } from "react-icons/bs";
 import AccessibleButtonName from "../acessibleButtonName";
 const Cart = () => {
-     console.log("cart rende");
+    
      const { storage } = useContext(CartContext);
      return (
           <S.Conteiner>

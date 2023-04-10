@@ -3,7 +3,7 @@ import ItemFilter from "../itemFilter";
 import ItemSubFilter from "../itemSubFilter";
 
 const FilterSelect = () => {
-     console.log("filter select render");
+   
      return (
           <S.FilterSelect>
                <p className="filtroTitle">filtrado por:</p>

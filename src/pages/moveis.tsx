@@ -10,7 +10,7 @@ type props = {
 };
 
 const Moveis = ({ data }: props) => {
-     console.log("moveis render");
+ 
      return (
           <>
                <Head>

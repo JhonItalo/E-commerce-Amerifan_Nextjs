@@ -11,8 +11,7 @@ type props = {
 };
 
 const Telefonia = ({ data }: props) => {
-     console.log("telefonia render");
-
+ 
      return (
           <>
                <Head>

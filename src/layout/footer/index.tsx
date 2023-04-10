@@ -8,7 +8,7 @@ import AccessibleName from "../../components/acessibleLinkName";
 import AccessibleButtonName from "../../components/acessibleButtonName";
 import { useRouter } from "next/router";
 const Footer = () => {
-     console.log("footer render");
+   
      const { asPath: pathname } = useRouter();
      return (
           <>

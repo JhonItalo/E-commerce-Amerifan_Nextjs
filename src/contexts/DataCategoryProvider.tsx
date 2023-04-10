@@ -13,7 +13,7 @@ interface props {
 }
 
 const DataCategoryProvider = ({ data, children }: props) => {
-     console.log("context data provider");
+ 
 
      return <DataProviderContext.Provider value={{ data }}>{children}</DataProviderContext.Provider>;
 };

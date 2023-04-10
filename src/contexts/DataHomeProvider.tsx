@@ -14,7 +14,7 @@ interface props {
 }
 
 const DataHomeProvider = ({ data, children }: props) => {
-     console.log("context data provider");
+     
 
      return <DataHomeContext.Provider value={data}>{children}</DataHomeContext.Provider>;
 };

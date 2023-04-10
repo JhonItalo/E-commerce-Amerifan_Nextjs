@@ -25,7 +25,7 @@ interface props {
 }
 
 const FilterProvider = ({ type, color, setType, setColor, children }: props) => {
-     console.log("context filter provider");
+    
 
      return (
           <FilterProviderContext.Provider value={{ type, color, setType, setColor }}>{children}</FilterProviderContext.Provider>

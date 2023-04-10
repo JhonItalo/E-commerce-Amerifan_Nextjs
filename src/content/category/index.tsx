@@ -13,8 +13,6 @@ const CategoryContent = ({ name }: props) => {
      const [color, setColor] = useState<string>("");
     
 
-     console.log("Produtos by category render");
-
      return (
           <S.ProductsByCategory>
                <h2>{name}</h2>

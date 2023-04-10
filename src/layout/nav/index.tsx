@@ -6,7 +6,7 @@ import { SlArrowDown } from "react-icons/sl";
 import ModalAllDepartaments from "../../components/modalAllDepartaments";
 
 const Nav = () => {
-     console.log("nave render");
+  
      const { asPath: pathname } = useRouter();
      return (
           <>
@@ -43,7 +43,7 @@ const Nav = () => {
 
                               <S.Li>
                                    <Link href="/tvevideo">
-                                        <p className={pathname === "/tvecideo" ? "active" : ""}>Tv e vídeo</p>
+                                        <p className={pathname === "/tvevideo" ? "active" : ""}>Tv e vídeo</p>
                                    </Link>
                               </S.Li>
 

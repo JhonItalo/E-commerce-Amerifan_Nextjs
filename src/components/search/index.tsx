@@ -10,7 +10,7 @@ import AccessibleName from "../acessibleLinkName";
 import { useRouter } from "next/navigation";
 
 const Search = () => {
-     console.log("busca render");
+     
      const inputRef = useRef<HTMLInputElement>(null);
      const router = useRouter();
 

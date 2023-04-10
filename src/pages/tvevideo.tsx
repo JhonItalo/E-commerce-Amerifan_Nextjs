@@ -10,7 +10,7 @@ type props = {
 };
 
 const TveVideo = ({ data }: props) => {
-     console.log("telefonia render");
+   
      return (
           <>
                <Head>

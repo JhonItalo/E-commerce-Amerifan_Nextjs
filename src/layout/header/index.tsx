@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import Account from "../../components/account";
 
 const Header = () => {
-     console.log("header render");
+    
      const { asPath: pathname } = useRouter();
      return (
           <>

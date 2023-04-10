@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 const Logo = () => {
-     console.log("logo render");
+   
      return (
           <S.Conteiner>
                <Link href="/">

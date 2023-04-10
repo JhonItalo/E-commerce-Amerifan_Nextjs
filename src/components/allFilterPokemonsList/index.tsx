@@ -37,7 +37,7 @@ const AllFilterPokemonsList = () => {
     }, [select,data]);    
       
      const order: pokemonInfo[] | undefined = selectOrder();
-
+     
      const filter: pokemonInfo[] =
      order && (type != "" || color != "")
          ? order.filter((item: pokemonInfo) => {
@@ -52,11 +52,10 @@ const AllFilterPokemonsList = () => {
            })
          : [];
 
-
      return (
           <S.ConteinerPokemons>
                <>
-               {filter.length > 1 && (
+               {filter.length >= 1 && (
                     <>
                         <div className="titleOrder">
                             <p style={{ color: "black" }}>{filter.length} resultados encontrados</p>
