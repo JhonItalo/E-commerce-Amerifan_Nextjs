@@ -127,15 +127,6 @@ export const Input = styled.input`
      padding: 1rem;
      font-size: 1rem;
      border-radius: 8px;
-     border: ${({ active }) => {
-          if (active === null) {
-               return "1px solid gray";
-          } else if (active) {
-               return "1px solid green";
-          } else if (active === false) {
-               return "1px solid red";
-          }
-     }};
      outline: none;
 `;
 
@@ -145,14 +136,5 @@ export const InputSenha = styled.input<propsInput>`
      padding: 1rem;
      padding-right: 3rem;
      border-radius: 8px;
-     border: ${({ active }) => {
-          if (active === null) {
-               return "1px solid gray";
-          } else if (active) {
-               return "1px solid green";
-          } else if (active === false) {
-               return "1px solid red";
-          }
-     }};
      outline: none;
 `;
