@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
-type contentprops = {
-     failure: boolean;
-};
-export const Content = styled.div<contentprops>`
+
+export const Content = styled.div`
      width: 350px;
      padding-bottom: 5rem;
      margin: 0 auto;
@@ -25,7 +23,7 @@ export const Content = styled.div<contentprops>`
           font-size: 1rem;
      }
      .failure {
-          display: ${({ failure }) => (failure ? "flex" : "none")};
+        display: flex;
           width: 100%;
           height: 50px;
           margin-top: 2rem;
@@ -57,11 +55,8 @@ export const Content = styled.div<contentprops>`
           width: 450px;
      }
 `;
-type propsForm = {
-     activeEmail: boolean | null;
-     activeSenha: boolean | null;
-};
-export const Form = styled.form<propsForm>`
+
+export const Form = styled.form`
      width: 100%;
      margin-top: 1.5rem;
      padding: 0 0.2rem;
@@ -80,15 +75,7 @@ export const Form = styled.form<propsForm>`
                height: 50px;
                padding: 1rem 0.8rem;
                font-size: 0.9rem;
-               border: ${({ activeEmail }) => {
-                    if (activeEmail === null) {
-                         return "1px solid gray";
-                    } else if (activeEmail) {
-                         return "1px solid green";
-                    } else if (activeEmail === false) {
-                         return "1px solid red";
-                    }
-               }};
+            
                border-radius: 7px;
                outline: none;
           }
@@ -103,15 +90,7 @@ export const Form = styled.form<propsForm>`
                display: flex;
                align-items: center;
                position: relative;
-               border: ${({ activeSenha }) => {
-                    if (activeSenha === null) {
-                         return "1px solid gray";
-                    } else if (activeSenha) {
-                         return "1px solid green";
-                    } else if (activeSenha === false) {
-                         return "1px solid red";
-                    }
-               }};
+             
                border-radius: 7px;
                input {
                     width: 100%;
@@ -139,13 +118,7 @@ export const Form = styled.form<propsForm>`
           cursor: pointer;
      }
 `;
-type propsInvalid = {
-     active: boolean;
-};
-export const Invalid = styled.span<propsInvalid>`
-     display: ${({ active }) => (active ? "block" : "none")};
-     color: rgb(209, 46, 56);
-`;
+
 export const Modal = styled.div`
      width: 200px;
      padding: 1rem;

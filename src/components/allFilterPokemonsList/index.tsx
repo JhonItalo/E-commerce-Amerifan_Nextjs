@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useCallback } from "react";
 import * as S from "./styles";
 import { DataProviderContext, DatacontextType } from "../../contexts/DataCategoryProvider";
 import { FilterProviderContext, FiltercontextType } from "../../contexts/FilterContext";
@@ -6,118 +6,104 @@ import Card from "../card/index";
 import { pokemonInfo } from "../../types/types";
 
 const AllFilterPokemonsList = () => {
-     console.log("list filter render");
-
      const { data } = useContext<DatacontextType>(DataProviderContext);
      const { type, color } = useContext<FiltercontextType>(FilterProviderContext);
      const [select, setSelect] = useState<string>("default");
 
-     const selectOrder = (select: string): pokemonInfo[] | undefined => {
+     const selectOrder = useCallback((): pokemonInfo[] | undefined => {
           if (data) {
-               if (select === "name") {
-                    const nameOrder = data.slice().sort((a, b) => {
-                         if (a.name < b.name) {
-                              return -1;
-                         } else {
-                              return 0;
-                         }
-                    });
-                    return nameOrder;
-               } else if (select === "type") {
-                    const typeOrder = data.slice().sort((a, b) => {
-                         if (a.types[0] < b.types[0]) {
-                              return -1;
-                         } else {
-                              return 0;
-                         }
-                    });
-                    return typeOrder;
-               }
+              if (select === "name") {
+                  const nameOrder = data.slice().sort((a, b) => {
+                      if (a.name < b.name) {
+                          return -1;
+                      } else {
+                          return 0;
+                      }
+                  });
+                  return nameOrder;
+              } else if (select === "type") {
+                  const typeOrder = data.slice().sort((a, b) => {
+                      if (a.types[0] < b.types[0]) {
+                          return -1;
+                      } else {
+                          return 0;
+                      }
+                  });
+                  return typeOrder;
+              }
           }
-               return data;
-     };
-     const order: pokemonInfo[] | undefined = selectOrder(select);
+          return data;
+      
+    }, [select,data]);    
+      
+     const order: pokemonInfo[] | undefined = selectOrder();
 
-     const filterType: pokemonInfo[] =
-          order && type != ""
-               ? order.filter((item: pokemonInfo) => {
-                      for (let i = 0; i < item.types.length; i++) {
-                           if (type.includes(item.types[i])) {
-                                return item.name;
-                           }
-                      }
-                 })
-               : [];
-
-     const filterColor: pokemonInfo[] =
-          order && color != ""
-               ? order.filter((item: pokemonInfo) => {
-                      if (color.includes(item.name)) {
-                           return item.name;
-                      }
-                 })
-               : [];
-
-     const processingArrayFilter = () => {
-          const filterConcats = filterType.concat(filterColor);
-          const removeDuplicate: pokemonInfo[] = [];
-
-          filterConcats.forEach((element) => {
-               if (!removeDuplicate.includes(element)) {
-                    removeDuplicate.push(element);
+     const filter: pokemonInfo[] =
+     order && (type != "" || color != "")
+         ? order.filter((item: pokemonInfo) => {
+             if(color.includes(item.name)){
+                 return item.name;
+             }
+               for (let i = 0; i < item.types.length; i++) {
+                   if (type.includes(item.types[i])) {
+                       return item.name;
+                   }
                }
-          });
-          return removeDuplicate;
-     };
+           })
+         : [];
 
-     const filtrados = processingArrayFilter();
 
      return (
           <S.ConteinerPokemons>
                <>
-                    {order && type === "" && color === "" && (
-                         <>
-                              <div className="titleOrder">
-                                   <p style={{ color: "black" }}>{order.length} resultados encontrados</p>
-                                   <select
-                                        value={select}
-                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelect(e.currentTarget.value)}
-                                   >
-                                        <option value="default">Creation date</option>
-                                        <option value="name">Name</option>
-                                        <option value="type">Type</option>
-                                   </select>
-                              </div>
+               {filter.length > 1 && (
+                    <>
+                        <div className="titleOrder">
+                            <p style={{ color: "black" }}>{filter.length} resultados encontrados</p>
+                            <select
+                                value={select}
+                                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                                    setSelect(e.currentTarget.value)
+                                }>
+                                <option value="default">Creation date</option>
+                                <option value="name">Name</option>
+                                <option value="type">Type</option>
+                            </select>
+                        </div>
 
-                              <S.ListPokemons>
-                                   {order.map((item: pokemonInfo) => (
-                                        <Card width="30%" key={item.id} pokemon={item} />
-                                   ))}
-                              </S.ListPokemons>
-                         </>
-                    )}
+                        <S.ListPokemons>
+                            {filter.map((item: pokemonInfo) => (
+                                <Card width="30%" key={item.id} pokemon={item} />
+                            ))}
+                        </S.ListPokemons>
+                    </>
+                )}
+                 {order && filter.length < 1 && (
+                    <>
+                        <div className="titleOrder">
+                            <p style={{ color: "black" }}>{order.length} resultados encontrados</p>
+                            <select
+                                value={select}
+                                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                                    setSelect(e.currentTarget.value)
+                                }>
+                                <option value="default">Creation date</option>
+                                <option value="name">Name</option>
+                                <option value="type">Type</option>
+                            </select>
+                        </div>
 
-                    {order && (type != "" || color != "") && (
-                         <>
-                              <div className="titleOrder">
-                                   <p style={{ color: "black" }}>{filtrados.length} resultados encontrados</p>
-                                   <select
-                                        value={select}
-                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSelect(e.currentTarget.value)}
-                                   >
-                                        <option value="default">Creation date</option>
-                                        <option value="name">Name</option>
-                                        <option value="type">Type</option>
-                                   </select>
-                              </div>
+                        <S.ListPokemons>
+                            {order &&
+                                order.map((item: pokemonInfo) => (
+                                    <Card width="30%" key={item.id} pokemon={item} />
+                                ))}
+                        </S.ListPokemons>
+                    </>
+                )}
 
-                              <S.ListPokemons>
-                                   {filtrados.map((item: pokemonInfo) => (
-                                        <Card width="30%" key={item.id} pokemon={item} />
-                                   ))}
-                              </S.ListPokemons>
-                         </>
-                    )}
+
+                   
                </>
           </S.ConteinerPokemons>
      );

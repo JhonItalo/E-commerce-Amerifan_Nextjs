@@ -22,11 +22,9 @@ export const Content = styled.main`
           font-size: 1.1rem;
      }
 `;
-type propsFailure = {
-     active: boolean;
-};
-export const Failure = styled.div<propsFailure>`
-     display: ${({ active }) => (active ? "flex" : "none")};
+
+export const Failure = styled.div`
+     display: flex;
      width: 100%;
      height: 50px;
      margin-top: 2rem;
@@ -119,10 +117,10 @@ export const ItemSenha = styled.label`
 `;
 
 type propsInput = {
-     active: boolean | null;
+    
      width?: string;
 };
-export const Input = styled.input<propsInput>`
+export const Input = styled.input`
      width: ${({ width }) => width};
      height: 50px;
      margin-top: 0.5rem;
