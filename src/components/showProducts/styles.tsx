@@ -62,8 +62,6 @@ export const Slide = styled.div`
      gap: 3.7%;
      overflow-x: hidden;
      scroll-behavior: smooth;   
-
-    
      .controlParentStyle:last-child {
     margin-right: 0.9%;
 }
