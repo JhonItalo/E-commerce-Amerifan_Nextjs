@@ -58,16 +58,6 @@ export const Conteiner = styled.div<propsConteiner>`
                }
           }
      }
-     @media (max-width: 1280px) and (min-width: 1100px) {
-          width: 220px;
-          height: 330px;
-          a {
-               img {
-                    width: 120px;
-                    height: 140px;
-               }
-          }
-     }
 `;
 
 interface propsType {
