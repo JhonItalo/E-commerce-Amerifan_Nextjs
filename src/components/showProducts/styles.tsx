@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Conteiner = styled.section`
      width: 88%;
+     min-height: 380px;
      margin: 2rem auto 3rem;
      display: flex;
      flex-direction: column;
@@ -43,7 +44,7 @@ export const ConteinerSlide = styled.div`
           }
      }
      .next {
-          right: -3%;
+          right: -4%;
      }
      .previous {
           left: -4%;
@@ -58,9 +59,14 @@ export const Slide = styled.div`
      padding: 1rem 0 1rem 0.9% ;
      display: flex;
      align-items: center;
-     gap: 3.4%;
+     gap: 3.7%;
      overflow-x: hidden;
      scroll-behavior: smooth;   
+
+    
+     .controlParentStyle:last-child {
+    margin-right: 0.9%;
+}
    
      
 `;

@@ -17,12 +17,12 @@ const ShowProducts = ({ title, data }: props) => {
 
      const handleScrollright = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft += (Carrosel.current.offsetWidth*0.5)
+               Carrosel.current.scrollLeft += Carrosel.current.offsetWidth * 0.5 + Carrosel.current.offsetWidth * 0.009;
           }
      };
      const handleScrollleft = () => {
           if (Carrosel.current) {
-               Carrosel.current.scrollLeft -= (Carrosel.current.offsetWidth*0.5);
+               Carrosel.current.scrollLeft -= Carrosel.current.offsetWidth * 0.5 + Carrosel.current.offsetWidth * 0.009;
           }
      };
 
